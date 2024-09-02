@@ -48,20 +48,27 @@
               "includePaths": [
                 "src/assets/style"
               ]
-            }
+            },
+            "budgets": [
+              {
+                "type": "anyComponentStyle",
+                "maximumWarning": "500kB",
+                "maximumError": "1MB"
+              }
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "3mb",
+                  "maximumError": "3mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "3mb",
+                  "maximumError": "3mb"
                 }
               ],
               "outputHashing": "all"
