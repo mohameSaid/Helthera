@@ -1,0 +1,216 @@
+@import "../../../assets/styles/abstracts/index.scss";
+@import "../../../assets/styles/base/index.scss";
+footer {
+  padding-left: 4rem;
+  font-family: "corben";
+  overflow: hidden;
+  @include responsive(mobile) {
+    padding: 1rem;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4.75rem;
+
+    @include responsive(mobile) {
+      gap: 2rem;
+    }
+    //footer logo
+    .footer-logo {
+      svg {
+        width: 10rem;
+      }
+      @include responsive(mobile) {
+        display: flex;
+        margin: 0;
+        justify-content: center;
+      }
+    }
+
+    //footer slices
+    nav.footer-nav {
+      display: flex;
+      // display: grid;
+      // grid-template-columns: repeat(4, 1fr);
+      // gap: 2.1rem;
+      @include responsive(small) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+      }
+      @include responsive(mobile) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer-slice {
+        display: flex;
+        flex-direction: column;
+        gap: 1.37rem;
+        @include responsive(small) {
+          width: 50%;
+        }
+        @include responsive(mobile) {
+          width: 100%;
+        }
+
+        h3 {
+          color: $support-grey;
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+          font-family: "Corben";
+          font-style: normal;
+          position: relative;
+
+          &::after {
+            content: ">";
+            position: absolute;
+            height: fit-content;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 1%;
+            font-size: 2rem;
+            font-weight: normal;
+            line-height: 1rem;
+            align-self: center;
+            transform: rotate(90deg);
+            margin-top: -0.5rem;
+            display: none;
+            @include responsive(mobile) {
+              display: block;
+            }
+          }
+          @include responsive(mobile) {
+            cursor: pointer;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid $support-grey;
+          }
+        }
+
+        ul {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          transition: 0.3s ease-in-out;
+          @include responsive(mobile) {
+            display: none;
+          }
+
+          li {
+            color: $text-grey;
+            font-size: 1.12rem;
+            font-weight: normal;
+            font-style: normal;
+            font-family: "sf-pro-display";
+            line-height: 2.8rem;
+            cursor: pointer;
+            width: fit-content;
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              width: 0%;
+              border-bottom: 2px solid $primary-main;
+              border-radius: 1rem;
+              left: 0;
+              bottom: 0;
+              transition: 0.4s ease-in-out;
+            }
+
+            &:hover {
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        &:first-child {
+          gap: 2rem;
+          margin-bottom: 1rem;
+
+          h3 {
+            border: none;
+            margin-bottom: 0;
+
+            &::after {
+              display: none;
+            }
+          }
+
+          @include responsive(small) {
+            order: 1;
+          }
+
+          .section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .section-info {
+              display: flex;
+              align-items: center;
+              gap: 0.75rem;
+
+              @include responsive(mobile) {
+                justify-content: center;
+              }
+
+              span {
+                max-width: 13.3rem;
+                font-weight: normal;
+                font-family: "sf-pro-display";
+                color: $text-grey;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //footer tail
+    .footer-tail {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: fit-content;
+      margin-bottom: 58px;
+
+      p {
+        color: $support-grey;
+        font-size: 1rem;
+        font-family: "sf-pro-display";
+        line-height: 4rem;
+
+        @include responsive(mobile) {
+          line-height: 1rem;
+        }
+      }
+
+      .social-icons {
+        display: flex;
+        margin-right: 10%;
+        gap: 0.5rem;
+        @include responsive(mobile) {
+          margin: 0;
+        }
+        img {
+          cursor: pointer;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+.show-footer-list {
+  display: block !important;
+}

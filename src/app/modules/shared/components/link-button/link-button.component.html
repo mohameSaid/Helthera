@@ -1,0 +1,41 @@
+<button
+  class="main-link-button"
+  [ngClass]="{
+    'main-link-button--primary': type === 'primary',
+    'main-link-button--secondary': type === 'secondary',
+    'includ-icon': icon
+  }"
+  (click)="onClick()"
+>
+  <span class="lable font-regular-large">{{ label }}</span>
+
+  <div class="arraw-icon" *ngIf="icon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="17.157"
+      height="17.32"
+      viewBox="0 0 17.157 17.32"
+    >
+      <g id="svgexport-85" transform="translate(5.441 21.534) rotate(-133)">
+        <path
+          id="Path_319183"
+          data-name="Path 319183"
+          d="M0,14.458V0"
+          transform="translate(7.229 0)"
+          fill="none"
+          stroke="#1a406d"
+          stroke-width="1.5"
+        />
+        <path
+          id="Path_319184"
+          data-name="Path 319184"
+          d="M14.457,0C11.634,1.618,7.228,7.228,7.228,7.228S2.823,1.618,0,0"
+          transform="translate(0 7.228)"
+          fill="none"
+          stroke="#1a406d"
+          stroke-width="1.5"
+        />
+      </g>
+    </svg>
+  </div>
+</button>

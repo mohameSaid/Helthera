@@ -1,0 +1,1382 @@
+<main class="container">
+  <!-- Landing Section -->
+  <section class="landing">
+    <div class="landing-content">
+      <div class="landing-text">
+        <h2
+          class="text-white"
+          typingEffect
+          textToType="Your Journey"
+          [typingSpeed]="100"
+          [startDelay]="0"
+        ></h2>
+        <p
+          class="primary-main"
+          typingEffect
+          textToType="Towards Redefined Healing"
+          [typingSpeed]="100"
+          [startDelay]="1000"
+        ></p>
+      </div>
+      <div>
+        <helthera-link-button
+          [label]="'about_us' | translate"
+          (clicked)="goTostayTuned()"
+        >
+        </helthera-link-button>
+      </div>
+    </div>
+    <div class="landing-cards animated">
+      <div class="card-1">
+        <div>
+          <div class="card-icon"></div>
+          <img
+            src="../../../../../assets/images/landing-card-graph.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <div class="card-1-content">
+            <span>16</span>
+            <p>{{ "joiners" | translate }}</p>
+          </div>
+          <div class="card-1-content">
+            <span>+5</span>
+            <p>{{ "from_last_week" | translate }}<span>+5</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-2">
+        <div></div>
+        <p>{{ "our_language_of_care" | translate }}</p>
+      </div>
+      <div class="card-3">
+        <div>
+          <div class="card-3-content">
+            <span>512</span>
+            <p>{{ "headcount" | translate }}</p>
+          </div>
+          <div class="card-3-content">
+            <span>+10</span>
+            <p>{{ "from_last_week" | translate }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="landing-cover">
+      <img src="../../../../../assets/images/motion-logo.gif" alt="" />
+    </div>
+  </section>
+
+  <div class="flex-center-all scroll-land">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      width="64.644"
+      height="64.828"
+      viewBox="0 0 64.644 64.828"
+    >
+      <g
+        id="Group_116852"
+        data-name="Group 116852"
+        transform="translate(0.483)"
+      >
+        <circle
+          id="Ellipse_11666"
+          data-name="Ellipse 11666"
+          cx="29"
+          cy="29"
+          r="29"
+          transform="translate(-0.483 5.055)"
+          fill="#2e7ac5"
+        />
+        <g id="svgexport-85" transform="translate(22.288 27.25)">
+          <path
+            id="Path_319183"
+            data-name="Path 319183"
+            d="M11.857,19.458V5"
+            transform="translate(-4.629 -5)"
+            fill="none"
+            stroke="#fff"
+            stroke-width="1.5"
+          />
+          <path
+            id="Path_319184"
+            data-name="Path 319184"
+            d="M19.457,11.857c-2.823,1.618-7.228,7.228-7.228,7.228S7.823,13.475,5,11.857"
+            transform="translate(-5 -4.629)"
+            fill="none"
+            stroke="rgba(255,255,255,0.99)"
+            stroke-width="1.5"
+          />
+        </g>
+        <image
+          id="Image_2"
+          data-name="Image 2"
+          width="49.096"
+          height="42.336"
+          transform="translate(31.951 0) rotate(49)"
+          xlink:href="data:image/png;base64,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"
+        />
+      </g>
+    </svg>
+  </div>
+
+  <section class="discover_booking">
+    <div class="hlthera-cards animated">
+      <div>
+        <div class="card-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="239.304"
+            height="58.315"
+            viewBox="253.347 1037.085 239.304 58.315"
+          >
+            <g data-name="Group 116899">
+              <g data-name="Group 44">
+                <path
+                  d="M407.197 1091.132a14.6 14.6 0 0 1-4.19-10.908 15.027 15.027 0 0 1 4.217-11.05 14.514 14.514 0 0 1 10.763-4.244 12.274 12.274 0 0 1 8.74 3.362 11.01 11.01 0 0 1 3.503 8.36c0 1.634-1.284 2.45-3.867 2.45h-17.485a11.898 11.898 0 0 0 3.197 8.252 10.27 10.27 0 0 0 7.855 3.363 11.434 11.434 0 0 0 6.075-1.843 5.958 5.958 0 0 1 2.017-.969c.373.034.724.187 1.002.437.344.248.55.642.559 1.066 0 1.107-.71 2.13-2.132 3.067a15.603 15.603 0 0 1-4.708 2.084 17.743 17.743 0 0 1-4.5.673 15.099 15.099 0 0 1-11.046-4.1Zm17.486-15.2a8.991 8.991 0 0 0-1.811-5.656 6.195 6.195 0 0 0-5.116-2.172 8.26 8.26 0 0 0-5.891 2.415 8.024 8.024 0 0 0-2.69 5.535h7.075c3.143 0 5.955-.04 8.434-.121Z"
+                  fill="#1a406d"
+                  fill-rule="evenodd"
+                  data-name="Path 104815"
+                />
+                <path
+                  d="M442.842 1094.42h-2.596c-2.643 0-4.27-.404-4.896-1.21a2.072 2.072 0 0 1-.426-1.346c-.039-.449.201-.876.605-1.076.42-.205.878-.318 1.345-.33.485-.02.953-.184 1.345-.47.425-.338.653-.866.606-1.406v-14.857c0-1.796-.225-2.906-.673-3.33a3.868 3.868 0 0 0-1.09-.814c-.44-.172-.889-.323-1.344-.45a10.964 10.964 0 0 1-1.527-.545.881.881 0 0 1-.592-.814c0-1.615 2.167-2.422 6.501-2.422 1.834 0 2.997.32 3.49.96.498.631.74 2.098.74 4.391a8.312 8.312 0 0 1 3.39-4.075 9.058 9.058 0 0 1 4.863-1.48 7.305 7.305 0 0 1 4.109 1.066c.975.55 1.59 1.571 1.62 2.69a3.404 3.404 0 0 1-1.065 2.623 3.652 3.652 0 0 1-2.596.982 4.304 4.304 0 0 1-2.643-.814 3.705 3.705 0 0 1-1.44-2.113 8.828 8.828 0 0 0-1.298-.121c-3.139 0-4.708 3.616-4.708 10.848v8.34c0 1.172.672 1.79 1.95 1.856 1.278.068 1.95.592 1.95 1.56a1.927 1.927 0 0 1-1.811 2.018 18.702 18.702 0 0 1-3.81.339Z"
+                  fill="#1a406d"
+                  fill-rule="evenodd"
+                  data-name="Path 104816"
+                />
+                <path
+                  d="M466.98 1075.266a4.83 4.83 0 0 1-2.535-.894 2.65 2.65 0 0 1-1.406-2.314 4.91 4.91 0 0 1 .82-2.69 6.63 6.63 0 0 1 2.12-2.072 13.154 13.154 0 0 1 3.019-1.345 22.196 22.196 0 0 1 6.768-1.003c4.067 0 7.024.897 8.871 2.69 1.847 1.794 2.769 4.769 2.765 8.926v8.944c0 2.157.27 3.503.814 4.036.412.26.868.445 1.345.545 2.058.673 3.09 1.144 3.09 1.48 0 2.116-2.167 3.174-6.5 3.174-1.635 0-2.697-.363-3.188-1.09a7.675 7.675 0 0 1-.803-3.954 10.028 10.028 0 0 1-4.176 3.935 12.24 12.24 0 0 1-5.952 1.513 15.595 15.595 0 0 1-5.38-.816 7.754 7.754 0 0 1-3.578-2.643 6.463 6.463 0 0 1-1.345-3.944c-.034-1.14.128-2.276.477-3.362a7.533 7.533 0 0 1 1.21-2.159 6.793 6.793 0 0 1 2.018-1.574 17.067 17.067 0 0 1 2.345-1.103 18.093 18.093 0 0 1 2.804-.74c1.695-.322 3.116-.547 4.264-.672 1.15-.135 1.74-.213 1.781-.23.04-.015.815-.093 2.072-.229a7.762 7.762 0 0 0 2.972-.8c0-3.829-.513-6.326-1.54-7.492-.907-1.009-2.394-1.507-4.475-1.507a6.262 6.262 0 0 0-4.668 1.58c-1.036 1.057-1.554 2.738-1.554 5.032v.672c-.816.085-1.635.12-2.455.106Zm14.608 4.29a19.822 19.822 0 0 1-4.634 1.043 28.84 28.84 0 0 0-4.069.672c-.863.215-1.694.54-2.474.969a4.829 4.829 0 0 0-2.293 4.56c0 3.462 2.017 5.194 6.053 5.199a6.244 6.244 0 0 0 6.618-4.984c.602-2.439.871-4.948.8-7.46Z"
+                  fill="#1a406d"
+                  fill-rule="evenodd"
+                  data-name="Path 104817"
+                />
+              </g>
+              <g data-name="Group 43">
+                <path
+                  d="M294.926 1094.421h-3.197c-2.919 0-4.708-.437-5.38-1.298a2.092 2.092 0 0 1-.458-1.345c-.041-.428.179-.84.558-1.042.469-.221.972-.36 1.487-.41a4.52 4.52 0 0 0 1.284-.303 2.131 2.131 0 0 0 1.123-2.098v-13.507h-25.877v13.507c-.074.707.19 1.407.713 1.889.5.388 1.103.621 1.735.672.437.031.87.097 1.298.195.535.106.895.61.82 1.15a2.36 2.36 0 0 1-.457 1.528 2.69 2.69 0 0 1-1.661.766 35.702 35.702 0 0 1-5.771.302 35.122 35.122 0 0 1-5.381-.242c-1.546-.403-2.353-1.224-2.413-2.474 0-.71.686-1.159 2.058-1.345.445-.05.882-.15 1.305-.297a2.055 2.055 0 0 0 1.172-2.144v-29.46a2.208 2.208 0 0 0-2.263-2.484c-1.278-.067-1.97-.29-2.092-.572a2.865 2.865 0 0 1-.18-1.113 1.95 1.95 0 0 1 .451-1.258 2.69 2.69 0 0 1 1.635-.766 38.692 38.692 0 0 1 5.724-.276 35.531 35.531 0 0 1 5.38.242c1.615.386 2.442 1.213 2.483 2.482 0 .72-.707 1.164-2.119 1.345a4.56 4.56 0 0 0-1.264.242 2.09 2.09 0 0 0-1.184 2.18v12.455h25.884v-12.476a2.212 2.212 0 0 0-2.267-2.451 3.464 3.464 0 0 1-1.889-.518 1.345 1.345 0 0 1-.35-.982 2.017 2.017 0 0 1 .276-1.065c.208-.325.515-.575.874-.713.404-.169.794-.31 1.164-.427a7.714 7.714 0 0 1 1.615-.221c1.03-.061 1.897-.094 2.602-.094h1.15a20.645 20.645 0 0 1 5.589.457c1.587.565 2.387 1.345 2.387 2.267a.928.928 0 0 1-.579.922c-.482.192-.99.315-1.507.363a4.755 4.755 0 0 0-1.271.256 2.18 2.18 0 0 0-1.172 2.206v29.459a2.267 2.267 0 0 0 .706 1.889 3.283 3.283 0 0 0 1.722.673c.453.033.902.098 1.346.195a.914.914 0 0 1 .786.981c.013.427-.065.85-.23 1.245a1.688 1.688 0 0 1-.8.753 7.533 7.533 0 0 1-1.029.437c-.474.129-.961.2-1.452.213-1.006.083-2.032.11-3.084.11Z"
+                  fill="#1a406d"
+                  fill-rule="evenodd"
+                  data-name="Path 104812"
+                />
+                <path
+                  d="M313.247 1094.421h-2.596c-2.643 0-4.27-.404-4.896-1.21a2.072 2.072 0 0 1-.426-1.346c-.04-.449.201-.876.605-1.076.42-.206.878-.318 1.345-.33a2.421 2.421 0 0 0 1.345-.47c.426-.339.654-.87.604-1.411v-31.834c0-1.838-.724-2.827-2.172-2.966l-.578-.06-.484-.041-.376-.061a1.345 1.345 0 0 1-.337-.107 1.035 1.035 0 0 1-.195-.154c-.142-.114-.213-.41-.213-.874a2.018 2.018 0 0 1 .928-1.447 6.968 6.968 0 0 1 4.56-1.391 9.263 9.263 0 0 1 3.565.363 2.226 2.226 0 0 1 1.036 1.877v36.767c0 1.173.672 1.79 1.95 1.857 1.278.067 1.95.591 1.95 1.56a1.927 1.927 0 0 1-1.812 2.017 18.745 18.745 0 0 1-3.803.337Z"
+                  fill="#1a406d"
+                  fill-rule="evenodd"
+                  data-name="Path 104813"
+                />
+                <path
+                  d="m326.22 1069.401-1.842.034a4.593 4.593 0 0 1-1.635-.213.853.853 0 0 1-.511-.888c.01-.479.223-.93.585-1.244.39-.369.847-.661 1.345-.861a6.257 6.257 0 0 0 2.495-1.433c.482-.824.891-1.688 1.224-2.582 1.345-3.322 2.466-4.983 3.363-4.983.463 0 .733.497.8 1.492.067.994.114 1.755.122 2.28.007.524 0 1.304 0 2.344v2.165h7.196a2.919 2.919 0 0 1 1.782.533c.465.315.739.844.727 1.406a1.56 1.56 0 0 1-.713 1.345 3.06 3.06 0 0 1-1.77.484h-7.246v15.462c0 4.372 1.098 6.558 3.295 6.558a9.875 9.875 0 0 0 2.69-.565 10.506 10.506 0 0 1 2.327-.559c.821 0 1.238.478 1.238 1.42 0 .749-.973 1.495-2.92 2.238a16.533 16.533 0 0 1-5.978 1.117 5.602 5.602 0 0 1-4.808-2.388 10.435 10.435 0 0 1-1.735-6.28l-.03-16.882Z"
+                  fill="#1a406d"
+                  fill-rule="evenodd"
+                  data-name="Path 104814"
+                />
+              </g>
+              <g data-name="hlthera">
+                <path
+                  d="M384.392 1063.348v28.176h7.86v-30.11c-3.047 1.07-6.475 1.702-7.86 1.934Z"
+                  fill="#1a406d"
+                  fill-rule="evenodd"
+                  data-name="Path 111"
+                />
+                <path
+                  d="M2747.06 342.31h.003l.043.002-.047-.001Z"
+                  fill-rule="evenodd"
+                  fill='url("#a")'
+                  transform="translate(-2365.62 716.037)"
+                  data-name="Path 96"
+                />
+                <path
+                  d="m2749.362 339.05-.006-.001.006.001Z"
+                  fill-rule="evenodd"
+                  fill='url("#b")'
+                  transform="translate(-2367.443 718.623)"
+                  data-name="Path 97"
+                />
+                <g data-name="Group 45">
+                  <path
+                    d="M.664 30.62c-.66-2.034-.79-4.239-.557-6.256.03-.268.067-.53.11-.787.326-1.955.99-3.674 1.83-4.803.39-.523.814-1.02 1.27-1.485 2.308-2.475 5.274-3.7 6.991-4.242 4.113-1.416 8.062-1.506 9.392-1.757 6.507-1.226 19.263-.838 27.187-2.838.79-.2 3.286-1.097 4.316-1.871 1.38-1.036 2.006-2.128 1.857-3.067-.325-1.384-2.182-1.925-2.182-1.925s-1.76-.578-4.073-.53c-2.314.048-7.81-.265-7.81-.265h-2.578l.265-.587h2.474l7.649-.145h.018V.003l.258-.002c6.555-.051 8.541 3.27 6.304 6.259-.386.542-.943 1.125-1.744 1.709-3.02 2.201-9.978 3.214-9.978 3.214l-2.667.402-14.847 1.791s-4.363.555-4.676.675c-.313.12-7.761 1.977-7.761 1.977S3.643 18.212 3.983 26.03c-.024 0-.03 4.809 3.652 6.467 1.966.725 4.012.404 4.012.404l.589-.008.103-.017a.093.093 0 0 0-.003.016l4.53-.056v5.032h-4.528v.021s-.34.037-.909.037c-2.372 0-8.71-.644-10.765-7.308Z"
+                    fill-rule="evenodd"
+                    fill='url("#c")'
+                    transform="translate(345.43 1057.472)"
+                    data-name="Union 1"
+                  />
+                </g>
+                <g data-name="Group 42">
+                  <path
+                    d="M367.349 1058.859a.276.276 0 1 0 0 .55h1.089c-.128-.18-.242-.369-.356-.55h-.733Z"
+                    fill="#2e7ac5"
+                    fill-rule="evenodd"
+                    data-name="Path 104818"
+                  />
+                  <path
+                    d="M374.423 1055.508a.276.276 0 0 1 .283-.19.269.269 0 0 1 .249.214l1.257 5.38 1.226-2.86.792-1.848a.262.262 0 0 1 .255-.168c.112 0 .213.066.256.168l.774 1.93.713-1.681a.276.276 0 0 1 .229-.169.256.256 0 0 1 .256.122l.834 1.27h.558c.094-.218.172-.443.236-.672 1.015-3.927-3.557-7.316-7.526-3.361-3.967-3.968-8.534-.579-7.519 3.362.184.647.462 1.264.827 1.83h5.198l1.102-3.327Z"
+                    fill="#2e7ac5"
+                    fill-rule="evenodd"
+                    data-name="Path 104819"
+                  />
+                  <path
+                    d="m381.148 1058.14-.672-.96-.78 1.812a.276.276 0 0 1-.512 0l-.726-1.918-2.085 4.895a.276.276 0 0 1-.255.169.282.282 0 0 1-.249-.213l-1.244-5.328-.874 2.636a.282.282 0 0 1-.262.189h-5.044a28.451 28.451 0 0 0 6.335 5.884s5.212-3.484 7.028-7.033h-.45a.289.289 0 0 1-.21-.133Z"
+                    fill="#2e7ac5"
+                    fill-rule="evenodd"
+                    data-name="Path 104820"
+                  />
+                  <path
+                    d="M382.094 1057.667h2.606v.626l-2.888-.024.282-.602Z"
+                    fill="#2e7ac5"
+                    fill-rule="evenodd"
+                    data-name="Path 150"
+                  />
+                </g>
+                <path
+                  d="M2749.39 339.056Z"
+                  fill-rule="evenodd"
+                  fill='url("#d")'
+                  transform="translate(-2367.47 718.617)"
+                  data-name="Path 101"
+                />
+                <path
+                  d="m2747.348 342.321.031.002.054.002-.085-.004Z"
+                  fill-rule="evenodd"
+                  fill='url("#e")'
+                  transform="translate(-2365.851 716.028)"
+                  data-name="Path 102"
+                />
+                <path
+                  d="M2749.481 339.081Z"
+                  fill-rule="evenodd"
+                  fill='url("#f")'
+                  transform="translate(-2367.542 718.597)"
+                  data-name="Path 103"
+                />
+                <g data-name="Path 104">
+                  <path
+                    d="M2769.19 338.27v1.014c-.21.002-.425.007-.646.015-2.362.086-5.144.016-7.215-.062v-.844l7.86-.123Z"
+                    fill-rule="evenodd"
+                    fill='url("#g")'
+                    transform="translate(-2376.937 719.24)"
+                  />
+                  <path
+                    d="M392.253 1057.51v1.015c-.21.001-.425.006-.645.014-2.363.086-5.145.017-7.216-.062v-.844l7.86-.123Z"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke="rgba(0,0,0,0 )"
+                    fill="transparent"
+                  />
+                </g>
+                <path
+                  d="m381.703 1058.359-.107-.005.107.005Z"
+                  fill-rule="evenodd"
+                  data-name="Path 108"
+                />
+                <path
+                  d="M381.435 1058.347h-.037.037Z"
+                  fill-rule="evenodd"
+                  data-name="Path 109"
+                />
+                <g data-name="Group 41">
+                  <g data-name="Group 39">
+                    <g data-name="Group 38">
+                      <g data-name="Group 36">
+                        <path
+                          d="M357.079 1037.085h35.174v4.123h-35.174v-4.123z"
+                          fill="#1a406d"
+                          fill-rule="evenodd"
+                          data-name="Rectangle 10"
+                        />
+                      </g>
+                      <g data-name="Group 37">
+                        <path
+                          d="M397.665 1045.074h-45.87v1.288h5.283v2.835h35.174v-2.835h5.413v-1.288Z"
+                          fill="#1a406d"
+                          fill-rule="evenodd"
+                          data-name="Path 105"
+                        />
+                      </g>
+                    </g>
+                  </g>
+                  <path
+                    d="M392.253 1094.101v-2.835h-9.793v-17.653H367v17.653h-9.922v4.124h14.044v-17.654h7.216v17.654h19.326v-1.289h-5.411Z"
+                    fill="#1a406d"
+                    fill-rule="evenodd"
+                    data-name="Path 107"
+                  />
+                  <g data-name="Group 40">
+                    <path
+                      d="M392.253 1049.133h-6.103c-1.242 0-1.758 1.728-1.758 2.608v12.53c2.844-.23 5.554-.545 7.861-1.028v-14.11Z"
+                      fill="#1a406d"
+                      fill-rule="evenodd"
+                      data-name="Path 110"
+                    />
+                  </g>
+                  <path
+                    d="M364.939 1049.13h-7.86v42.394h6.102c1.242 0 1.758-2.062 1.758-3.112v-39.283Z"
+                    fill="#1a406d"
+                    fill-rule="evenodd"
+                    data-name="Path 106"
+                  />
+                </g>
+              </g>
+            </g>
+            <defs>
+              <linearGradient
+                x1="-457.232"
+                y1="21645.5"
+                x2="-2.191"
+                y2="127.857"
+                id="a"
+              >
+                <stop stop-color="#1b406d" offset="0" />
+                <stop stop-color="#268ddd" offset="1" />
+              </linearGradient>
+              <linearGradient
+                x1="-688.161"
+                y1="5593.03"
+                x2="673.277"
+                y2="-5463.3"
+                id="b"
+              >
+                <stop stop-color="#1b406d" offset="0" />
+                <stop stop-color="#268ddd" offset="1" />
+              </linearGradient>
+              <linearGradient x1=".179" y1="1.018" x2=".675" y2="-.006" id="c">
+                <stop stop-color="#1a406d" offset="0" />
+                <stop stop-color="#1a406d" offset=".15" />
+                <stop stop-color="#2e7ac5" offset=".83" />
+                <stop stop-color="#2e7ac5" offset="1" />
+              </linearGradient>
+              <linearGradient
+                x1="-653.664"
+                y1="5833.38"
+                x2="654.068"
+                y2="-5830.99"
+                id="d"
+              >
+                <stop stop-color="#1b406d" offset="0" />
+                <stop stop-color="#268ddd" offset="1" />
+              </linearGradient>
+              <linearGradient
+                x1="-249.054"
+                y1="9637.25"
+                x2="-1.19"
+                y2="65.742"
+                id="e"
+              >
+                <stop stop-color="#1b406d" offset="0" />
+                <stop stop-color="#268ddd" offset="1" />
+              </linearGradient>
+              <linearGradient
+                x1="-688.518"
+                y1="5487.86"
+                x2="689.374"
+                y2="-5485.5"
+                id="f"
+              >
+                <stop stop-color="#1b406d" offset="0" />
+                <stop stop-color="#268ddd" offset="1" />
+              </linearGradient>
+              <linearGradient
+                x1="-2.472"
+                y1="37.105"
+                x2=".239"
+                y2="3.744"
+                id="g"
+              >
+                <stop stop-color="#1b406d" offset="0" />
+                <stop stop-color="#268ddd" offset="1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <p class="font-regular-large sf-pro-font text-grey">
+            {{ "discover_card" | translate }}
+          </p>
+
+          <helthera-link-button
+            type="secondary"
+            [label]="'discover_button' | translate"
+            (clicked)="goTostayTuned()"
+          >
+          </helthera-link-button>
+        </div>
+      </div>
+      <div>
+        <div class="card-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="212.614"
+            height="64.453"
+            viewBox="960.001 1014.085 212.614 64.453"
+          >
+            <g data-name="hlthera_logo">
+              <path
+                d="M1047.64 1058.28c1.102 0 1.654.706 1.654 2.119 0 1.413-.594 2.684-1.78 3.815-1.188 1.13-2.502 1.695-3.943 1.695l-16.13-.084c-1.95 0-3.193-.05-3.73-.149-1.116-.297-1.696-.883-1.738-1.759 0-.495.48-.805 1.441-.933.452-.07.756-.14.912-.212.55-.226.826-.727.826-1.504v-20.666c0-1.017-.53-1.596-1.59-1.738a31.667 31.667 0 0 0-.55-.074 7.233 7.233 0 0 1-.424-.063.687.687 0 0 1-.233-.075 2.829 2.829 0 0 1-.16-.116.427.427 0 0 1-.137-.18 2.514 2.514 0 0 1-.085-.721c0-.297.11-.576.329-.837.219-.262.604-.442 1.155-.54.706-.128 2.034-.191 3.984-.191h17.656c1.074 0 1.94.424 2.596 1.271.657.848.986 1.88.986 3.095 0 2.091-.728 3.137-2.183 3.137-.905 0-1.53-.286-1.876-.859-.346-.572-.52-1.32-.52-2.246 0-.926.008-1.558.022-1.897h-14.328v10.576h9.093c.099-.099.268-.389.508-.869.65-1.314 1.124-1.971 1.42-1.971 1.597 0 2.396 1.356 2.396 4.07 0 1.158-.166 2.158-.499 2.998-.332.841-.858 1.262-1.579 1.262-.381 0-.695-.142-.943-.424-.247-.283-.501-.742-.763-1.378-.261-.636-.448-1.053-.561-1.25h-9.072v11.466h13.544c.254-.254.629-.812 1.123-1.674.495-.862 1.003-1.594 1.526-2.194.523-.6 1.074-.9 1.653-.9Zm10.544 7.545-1.822.02c-1.851 0-2.996-.282-3.434-.847a1.457 1.457 0 0 1-.297-.922c0-.36.142-.611.424-.752.283-.142.597-.22.943-.234.347-.014.661-.123.944-.328.282-.205.424-.534.424-.986v-12.102c0-.82-.51-1.314-1.527-1.484-.706-.113-1.133-.237-1.282-.37-.148-.135-.222-.375-.222-.721 0-.347.247-.66.741-.944.834-.508 1.883-.763 3.148-.763 1.265 0 2.077.18 2.437.541.36.36.54 1.162.54 2.406 1.937-2.19 4.6-3.286 7.991-3.286 2.756 0 4.71.753 5.86 2.258 1.152 1.504 1.728 3.783 1.728 6.835v7.63c0 .82.456 1.254 1.367 1.304.912.05 1.367.413 1.367 1.091 0 .763-.438 1.244-1.314 1.442-.65.14-1.547.212-2.691.212l-1.823.02c-1.851 0-2.996-.282-3.434-.847a1.457 1.457 0 0 1-.297-.922c0-.36.142-.611.424-.752.283-.142.597-.22.944-.234.346-.014.66-.123.943-.328.282-.205.424-.534.424-.986v-6.168c0-2.628-.304-4.55-.912-5.765-.678-1.37-2.042-2.056-4.09-2.056-2.473 0-4.155.658-5.045 1.972-.834 1.243-1.25 3.228-1.25 5.955v6.062c0 .82.455 1.254 1.367 1.304.911.05 1.367.413 1.367 1.091 0 .777-.431 1.258-1.293 1.442-.622.14-1.505.212-2.65.212Zm41.829-13.184c0 1.286-.488 2.416-1.463 3.391-1.907 1.908-4.627 2.862-8.16 2.862a12.98 12.98 0 0 1-2.204-.202 71.688 71.688 0 0 0-1.463-.243v-.022c-1.074.905-1.61 1.696-1.61 2.374 0 .622.303 1.039.91 1.25.863.312 2.064.481 3.604.51 1.54.028 2.741.053 3.603.074.862.02 1.795.067 2.798.137 1.003.071 1.886.209 2.65.414.762.205 1.476.477 2.14.816 1.357.706 2.035 1.907 2.035 3.603 0 1.272-.332 2.395-.996 3.37-.665.975-1.555 1.745-2.671 2.31-2.218 1.145-4.86 1.717-7.927 1.717-2.656 0-4.995-.367-7.016-1.102-1.088-.396-1.95-.979-2.585-1.749-.636-.77-.954-1.692-.954-2.766 0-2.006 1.01-3.553 3.03-4.641-.536-.523-.9-1.018-1.09-1.484-.192-.466-.287-1.01-.287-1.632 0-.622.057-1.102.17-1.441.113-.34.29-.65.53-.933.31-.367.89-.869 1.738-1.505-1.329-.664-2.343-1.41-3.042-2.236-.7-.826-1.05-1.872-1.05-3.137 0-1.264.294-2.363.88-3.296a6.548 6.548 0 0 1 2.321-2.225c1.95-1.116 4.126-1.674 6.528-1.674.679 0 1.947.173 3.805.519 1.858.346 2.9.52 3.126.52 1.258 0 1.993-.63 2.205-1.887 1.808 0 2.713.72 2.713 2.162 0 .692-.209 1.24-.626 1.642-.417.403-.897.604-1.441.604s-1.127-.028-1.749-.085c.41.354.77.905 1.081 1.654.311.749.467 1.526.467 2.331Zm-9.496-5.638c-1.526 0-2.822.445-3.89 1.336-1.066.89-1.6 2.063-1.6 3.518 0 1.455.548 2.65 1.643 3.582 1.095.933 2.434 1.399 4.017 1.399 1.582 0 2.865-.435 3.847-1.304.982-.869 1.473-2.003 1.473-3.401 0-1.4-.534-2.604-1.6-3.614-1.067-1.01-2.364-1.516-3.89-1.516Zm.36 25.52c2.177 0 3.83-.23 4.96-.69 1.13-.459 1.915-.989 2.353-1.59.438-.6.657-1.317.657-2.15 0-1.739-3.377-2.608-10.131-2.608-1.908 0-2.862-.02-2.862-.063-1.074 1.088-1.61 2.126-1.61 3.115 0 2.657 2.21 3.985 6.634 3.985Zm17.963-20.136c-.523 0-1.113-.209-1.77-.625-.657-.417-.985-.961-.985-1.632 0-.672.19-1.304.572-1.897a4.623 4.623 0 0 1 1.484-1.452 9.452 9.452 0 0 1 2.119-.943c1.47-.467 3.052-.7 4.748-.7 2.854 0 4.928.632 6.22 1.897 1.293 1.265 1.94 3.352 1.94 6.263l-.021 6.253c0 1.512.19 2.458.572 2.84.099.099.41.226.933.381 1.44.453 2.161.799 2.161 1.039 0 1.484-1.519 2.225-4.557 2.225-1.144 0-1.89-.254-2.236-.762-.346-.51-.533-1.435-.561-2.777-.636 1.144-1.604 2.07-2.904 2.777a8.612 8.612 0 0 1-4.175 1.06c-1.484 0-2.742-.191-3.773-.573a5.427 5.427 0 0 1-2.512-1.855c-.643-.854-.964-1.776-.964-2.766 0-.989.113-1.784.339-2.384.226-.6.509-1.106.848-1.515.339-.41.802-.778 1.388-1.103a12.422 12.422 0 0 1 1.643-.773c.508-.191 1.165-.364 1.97-.52a41.758 41.758 0 0 1 2.99-.476c.805-.092 1.222-.145 1.25-.16.085-.014.569-.066 1.452-.158s1.579-.28 2.087-.562c0-2.685-.36-4.437-1.08-5.256-.636-.707-1.682-1.06-3.137-1.06-1.456 0-2.547.37-3.275 1.113-.728.741-1.092 1.918-1.092 3.529l.022.466a14.36 14.36 0 0 1-1.696.106Zm10.258 3.01c-.96.353-2.045.597-3.253.73-1.208.135-2.158.294-2.85.478-.693.183-1.273.41-1.739.678-1.074.622-1.61 1.688-1.61 3.2 0 2.43 1.412 3.646 4.238 3.646 2.445 0 3.992-1.166 4.642-3.497.382-1.328.572-3.074.572-5.235Zm29.938-2.756c0 1.286-.487 2.416-1.462 3.391-1.908 1.908-4.628 2.862-8.16 2.862a12.98 12.98 0 0 1-2.205-.202 71.656 71.656 0 0 0-1.462-.243v-.022c-1.074.905-1.611 1.696-1.611 2.374 0 .622.304 1.039.911 1.25.862.312 2.063.481 3.603.51 1.54.028 2.742.053 3.604.074.862.02 1.794.067 2.797.137 1.004.071 1.887.209 2.65.414a10.92 10.92 0 0 1 2.14.816c1.357.706 2.035 1.907 2.035 3.603 0 1.272-.332 2.395-.996 3.37-.664.975-1.554 1.745-2.67 2.31-2.219 1.145-4.861 1.717-7.928 1.717-2.656 0-4.994-.367-7.015-1.102-1.088-.396-1.95-.979-2.586-1.749-.636-.77-.954-1.692-.954-2.766 0-2.006 1.01-3.553 3.031-4.641-.537-.523-.9-1.018-1.091-1.484-.191-.466-.286-1.01-.286-1.632 0-.622.056-1.102.17-1.441.112-.34.289-.65.529-.933.31-.367.89-.869 1.738-1.505-1.328-.664-2.342-1.41-3.042-2.236-.699-.826-1.049-1.872-1.049-3.137 0-1.264.294-2.363.88-3.296a6.547 6.547 0 0 1 2.32-2.225c1.95-1.116 4.127-1.674 6.529-1.674.678 0 1.946.173 3.804.519 1.859.346 2.9.52 3.127.52 1.257 0 1.992-.63 2.204-1.887 1.809 0 2.713.72 2.713 2.162 0 .692-.208 1.24-.625 1.642-.417.403-.898.604-1.442.604-.544 0-1.126-.028-1.748-.085.41.354.77.905 1.08 1.654.312.749.467 1.526.467 2.331Zm-9.495-5.638c-1.526 0-2.823.445-3.89 1.336-1.066.89-1.6 2.063-1.6 3.518 0 1.455.548 2.65 1.643 3.582 1.095.933 2.434 1.399 4.016 1.399 1.583 0 2.865-.435 3.847-1.304.982-.869 1.473-2.003 1.473-3.401 0-1.4-.533-2.604-1.6-3.614-1.067-1.01-2.363-1.516-3.89-1.516Zm.36 25.52c2.176 0 3.83-.23 4.96-.69 1.13-.459 1.914-.989 2.352-1.59.438-.6.657-1.317.657-2.15 0-1.739-3.377-2.608-10.13-2.608-1.908 0-2.862-.02-2.862-.063-1.074 1.088-1.611 2.126-1.611 3.115 0 2.657 2.211 3.985 6.634 3.985Zm16.542-9.009c-1.95-1.921-2.925-4.472-2.925-7.651 0-3.18.986-5.762 2.957-7.747 1.971-1.985 4.483-2.978 7.535-2.978 2.416 0 4.454.78 6.115 2.342 1.66 1.562 2.49 3.522 2.49 5.882 0 1.144-.904 1.717-2.713 1.717h-12.272c.029 2.289.77 4.217 2.226 5.786 1.455 1.568 3.292 2.353 5.51 2.353 1.47 0 2.897-.431 4.282-1.293.735-.453 1.204-.679 1.41-.679.204 0 .437.103.699.308.261.205.392.455.392.752 0 .777-.498 1.494-1.494 2.151a11.098 11.098 0 0 1-3.296 1.463c-1.201.318-2.254.477-3.158.477-3.208 0-5.794-.961-7.758-2.883Zm12.272-10.66c-.028-1.626-.452-2.947-1.271-3.964-.82-1.018-2.017-1.526-3.593-1.526-1.575 0-2.953.565-4.133 1.695-1.18 1.13-1.805 2.424-1.876 3.879h4.96c2.204 0 4.175-.028 5.913-.085Z"
+                fill="#2e7ac5"
+                fill-rule="evenodd"
+                data-name="Lounge"
+              />
+              <g data-name="hlthera_logo_symbol">
+                <g data-name="hlthera">
+                  <path
+                    d="M1003.063 1043.113v31.142h8.688v-33.28c-3.367 1.182-7.157 1.88-8.688 2.138Z"
+                    fill="#1a406d"
+                    fill-rule="evenodd"
+                    data-name="Path 111"
+                  />
+                  <path
+                    d="M2747.06 342.311h.004l.048.001-.052-.001Z"
+                    fill-rule="evenodd"
+                    fill='url("#a")'
+                    transform="translate(-1747.261 695.275)"
+                    data-name="Path 96"
+                  />
+                  <path
+                    d="M2749.368 339.05h-.007.007Z"
+                    fill-rule="evenodd"
+                    fill='url("#b")'
+                    transform="translate(-1749.037 697.79)"
+                    data-name="Path 97"
+                  />
+                  <g data-name="Group 45">
+                    <path
+                      d="M.734 33.843c-.73-2.248-.873-4.685-.616-6.914.034-.297.074-.587.123-.87.36-2.16 1.093-4.061 2.022-5.31.43-.577.9-1.126 1.404-1.64 2.55-2.735 5.828-4.09 7.727-4.689 4.545-1.565 8.91-1.664 10.38-1.941 7.191-1.355 21.29-.927 30.049-3.138.872-.22 3.63-1.212 4.77-2.068 1.524-1.144 2.216-2.351 2.052-3.39-.359-1.529-2.411-2.126-2.411-2.126s-1.945-.64-4.502-.587C49.174 1.224 43.1.877 43.1.877h-2.85l.293-.648h2.735l8.454-.16.02-.001V.003l.284-.002c7.246-.056 9.441 3.615 6.968 6.918-.427.6-1.042 1.244-1.927 1.889-3.338 2.433-11.029 3.552-11.029 3.552l-2.948.444-16.41 1.98s-4.821.613-5.167.746c-.347.133-8.578 2.185-8.578 2.185S4.027 20.129 4.402 28.77c-.027 0-.032 5.315 4.037 7.148 2.172.801 4.434.446 4.434.446l.65-.008.114-.02a.103.103 0 0 0-.002.018l5.006-.061v5.561h-5.004v.024s-.377.04-1.004.04c-2.622 0-9.628-.711-11.9-8.076Z"
+                      fill-rule="evenodd"
+                      fill='url("#c")'
+                      transform="translate(960.001 1036.619)"
+                      data-name="Union 1"
+                    />
+                  </g>
+                  <g data-name="Group 42">
+                    <path
+                      d="M984.226 1038.151a.305.305 0 1 0 0 .61h1.204c-.141-.201-.267-.41-.394-.61h-.81Z"
+                      fill="#2e7ac5"
+                      fill-rule="evenodd"
+                      data-name="Path 104818"
+                    />
+                    <path
+                      d="M992.046 1034.447a.305.305 0 0 1 .312-.208.297.297 0 0 1 .275.235l1.39 5.947 1.355-3.162.875-2.042a.29.29 0 0 1 .282-.186c.123 0 .235.073.283.186l.855 2.133.788-1.858a.305.305 0 0 1 .253-.186.283.283 0 0 1 .283.134l.922 1.405h.617c.103-.242.19-.49.26-.743 1.123-4.341-3.93-8.087-8.317-3.716-4.385-4.385-9.433-.64-8.31 3.716.202.716.51 1.397.914 2.022h5.745l1.218-3.677Z"
+                      fill="#2e7ac5"
+                      fill-rule="evenodd"
+                      data-name="Path 104819"
+                    />
+                    <path
+                      d="m999.479 1037.356-.744-1.06-.862 2.002a.305.305 0 0 1-.565 0l-.803-2.12-2.304 5.411a.305.305 0 0 1-.283.186.312.312 0 0 1-.274-.235l-1.376-5.89-.966 2.915a.312.312 0 0 1-.29.208h-5.574a31.447 31.447 0 0 0 7.002 6.504s5.76-3.85 7.768-7.774h-.499a.319.319 0 0 1-.23-.147Z"
+                      fill="#2e7ac5"
+                      fill-rule="evenodd"
+                      data-name="Path 104820"
+                    />
+                    <path
+                      d="M1000.523 1036.834h2.881v.692l-3.192-.026.311-.666Z"
+                      fill="#2e7ac5"
+                      fill-rule="evenodd"
+                      data-name="Path 150"
+                    />
+                  </g>
+                  <path
+                    d="M2749.39 339.056Z"
+                    fill-rule="evenodd"
+                    fill='url("#d")'
+                    transform="translate(-1749.06 697.785)"
+                    data-name="Path 101"
+                  />
+                  <path
+                    d="m2747.351 342.321.035.002.06.002-.095-.004Z"
+                    fill-rule="evenodd"
+                    fill='url("#e")'
+                    transform="translate(-1747.488 695.267)"
+                    data-name="Path 102"
+                  />
+                  <path
+                    d="M2749.483 339.081h-.001Z"
+                    fill-rule="evenodd"
+                    fill='url("#f")'
+                    transform="translate(-1749.129 697.765)"
+                    data-name="Path 103"
+                  />
+                  <g data-name="Path 104">
+                    <path
+                      d="M2770.02 338.27v1.121c-.231.002-.47.007-.713.016-2.612.095-5.686.018-7.975-.068v-.933l8.688-.136Z"
+                      fill-rule="evenodd"
+                      fill='url("#g")'
+                      transform="translate(-1758.268 698.39)"
+                    />
+                    <path
+                      d="M1011.751 1036.66v1.122c-.23.002-.469.007-.712.016-2.612.095-5.686.018-7.976-.069v-.933l8.688-.135Z"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke="rgba(0,0,0,0 )"
+                      fill="transparent"
+                    />
+                  </g>
+                  <path
+                    d="m1000.092 1037.598-.118-.005.118.005Z"
+                    fill-rule="evenodd"
+                    data-name="Path 108"
+                  />
+                  <path
+                    d="m999.795 1037.586-.041-.001h.04Z"
+                    fill-rule="evenodd"
+                    data-name="Path 109"
+                  />
+                  <g data-name="Group 41">
+                    <g data-name="Group 39">
+                      <g data-name="Group 38">
+                        <g data-name="Group 36">
+                          <path
+                            d="M972.875 1014.085h38.877v4.557h-38.877v-4.557z"
+                            fill="#1a406d"
+                            fill-rule="evenodd"
+                            data-name="Rectangle 10"
+                          />
+                        </g>
+                        <g data-name="Group 37">
+                          <path
+                            d="M1017.734 1022.915h-50.698v1.424h5.839v3.134h38.877v-3.134h5.982v-1.424Z"
+                            fill="#1a406d"
+                            fill-rule="evenodd"
+                            data-name="Path 105"
+                          />
+                        </g>
+                      </g>
+                    </g>
+                    <path
+                      d="M1011.752 1077.103v-3.133h-10.823v-19.512H983.84v19.512h-10.966v4.557h15.521v-19.512h7.976v19.512h21.36v-1.424h-5.98Z"
+                      fill="#1a406d"
+                      fill-rule="evenodd"
+                      data-name="Path 107"
+                    />
+                    <g data-name="Group 40">
+                      <path
+                        d="M1011.752 1027.401h-6.745c-1.374 0-1.943 1.91-1.943 2.883v13.849c3.143-.254 6.139-.602 8.688-1.136v-15.596Z"
+                        fill="#1a406d"
+                        fill-rule="evenodd"
+                        data-name="Path 110"
+                      />
+                    </g>
+                    <path
+                      d="M981.563 1027.398h-8.688v46.857h6.745c1.372 0 1.943-2.28 1.943-3.44v-43.417Z"
+                      fill="#1a406d"
+                      fill-rule="evenodd"
+                      data-name="Path 106"
+                    />
+                  </g>
+                </g>
+              </g>
+            </g>
+            <defs>
+              <linearGradient
+                x1="-457.232"
+                y1="21645.5"
+                x2="-2.191"
+                y2="127.857"
+                id="a"
+              >
+                <stop stop-color="#1b406d" offset="0" />
+                <stop stop-color="#268ddd" offset="1" />
+              </linearGradient>
+              <linearGradient
+                x1="-688.161"
+                y1="5593.03"
+                x2="673.277"
+                y2="-5463.3"
+                id="b"
+              >
+                <stop stop-color="#1b406d" offset="0" />
+                <stop stop-color="#268ddd" offset="1" />
+              </linearGradient>
+              <linearGradient x1=".179" y1="1.018" x2=".675" y2="-.006" id="c">
+                <stop stop-color="#1a406d" offset="0" />
+                <stop stop-color="#1a406d" offset=".15" />
+                <stop stop-color="#2e7ac5" offset=".83" />
+                <stop stop-color="#2e7ac5" offset="1" />
+              </linearGradient>
+              <linearGradient
+                x1="-653.664"
+                y1="5833.38"
+                x2="654.068"
+                y2="-5830.99"
+                id="d"
+              >
+                <stop stop-color="#1b406d" offset="0" />
+                <stop stop-color="#268ddd" offset="1" />
+              </linearGradient>
+              <linearGradient
+                x1="-249.054"
+                y1="9637.25"
+                x2="-1.19"
+                y2="65.742"
+                id="e"
+              >
+                <stop stop-color="#1b406d" offset="0" />
+                <stop stop-color="#268ddd" offset="1" />
+              </linearGradient>
+              <linearGradient
+                x1="-688.518"
+                y1="5487.86"
+                x2="689.374"
+                y2="-5485.5"
+                id="f"
+              >
+                <stop stop-color="#1b406d" offset="0" />
+                <stop stop-color="#268ddd" offset="1" />
+              </linearGradient>
+              <linearGradient
+                x1="-2.472"
+                y1="37.105"
+                x2=".239"
+                y2="3.744"
+                id="g"
+              >
+                <stop stop-color="#1b406d" offset="0" />
+                <stop stop-color="#268ddd" offset="1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <p class="font-regular-large sf-pro-font text-grey">
+            {{ "booking_card" | translate }}
+          </p>
+          <helthera-link-button
+            type="secondary"
+            [label]="'booking_button' | translate"
+            (clicked)="goTostayTuned()"
+          >
+          </helthera-link-button>
+        </div>
+      </div>
+    </div>
+    <div class="logo-slide-bar">
+      <p class="font-regular-xl sf-pro-font text-grey">
+        {{ "powered_by" | translate }}
+      </p>
+      <div class="logo-slider">
+        <div class="slide">
+          <img src="../../../../../assets/images/slide-1.png" alt="" />
+          <img src="../../../../../assets/images/slide-2.png" alt="" />
+          <img src="../../../../../assets/images/slide-3.png" alt="" />
+          <img src="../../../../../assets/images/Amazon_logo.svg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="../../../../../assets/images/slide-1.png" alt="" />
+          <img src="../../../../../assets/images/slide-2.png" alt="" />
+          <img src="../../../../../assets/images/slide-3.png" alt="" />
+          <img src="../../../../../assets/images/Amazon_logo.svg" alt="" />
+        </div>
+        <div class="slide">
+          <img src="../../../../../assets/images/slide-1.png" alt="" />
+          <img src="../../../../../assets/images/slide-2.png" alt="" />
+          <img src="../../../../../assets/images/slide-3.png" alt="" />
+          <img
+            src="../../../../../assets/images/Slider/Amazon_logo.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="language_care animated">
+    <div class="care-content">
+      <div class="d-flex align-center">
+        <div>
+          <h2 class="text-blue">{{ "our_language_of_care" | translate }}</h2>
+          <p class="text-grey font-regular-large sf-pro-font">
+            {{ "our_language_of_care_content" | translate }}
+          </p>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="272.711"
+          height="207.655"
+          viewBox="1002.145 1728 272.711 207.655"
+        >
+          <g data-name="Group 42">
+            <path
+              d="M1006.672 1836.01a4.266 4.266 0 1 0 0 8.515h16.832c-1.977-2.8-3.74-5.716-5.501-8.515h-11.331Z"
+              fill="#2e7ac5"
+              fill-rule="evenodd"
+              data-name="Path 104818"
+            />
+            <path
+              d="M1116.018 1784.212a4.264 4.264 0 0 1 4.363-2.916 4.15 4.15 0 0 1 3.855 3.294l19.431 83.158 18.946-44.208 12.236-28.557a4.054 4.054 0 0 1 3.954-2.602 4.266 4.266 0 0 1 3.952 2.602l11.957 29.827 11.018-25.992a4.268 4.268 0 0 1 3.542-2.602 3.953 3.953 0 0 1 3.956 1.88l12.893 19.645h8.631a84.054 84.054 0 0 0 3.64-10.392c15.696-60.705-54.978-113.08-116.315-51.96-61.315-61.318-131.907-8.943-116.21 51.963a104.564 104.564 0 0 0 12.78 28.282h80.34l17.03-51.422Z"
+              fill="#2e7ac5"
+              fill-rule="evenodd"
+              data-name="Path 104819"
+            />
+            <path
+              d="m1219.96 1824.893-10.392-14.824-12.057 27.996a4.265 4.265 0 0 1-7.905 0l-11.234-29.643-32.215 75.664a4.266 4.266 0 0 1-3.953 2.602 4.362 4.362 0 0 1-3.837-3.294l-19.237-82.35-13.506 40.746a4.365 4.365 0 0 1-4.052 2.915h-77.953a439.744 439.744 0 0 0 97.914 90.95s80.557-53.847 108.621-108.705h-6.966a4.46 4.46 0 0 1-3.228-2.059Z"
+              fill="#385b8a"
+              fill-rule="evenodd"
+              data-name="Path 104820"
+            />
+            <path
+              d="M1234.57 1817.585h40.285v9.686l-44.644-.372 4.358-9.314Z"
+              fill="#2e7ac5"
+              fill-rule="evenodd"
+              data-name="Path 150"
+            />
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="seperator">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="100"
+        height="100"
+        viewBox="0 0 149 149"
+      >
+        <defs>
+          <linearGradient
+            id="linear-gradient"
+            x1="-457.232"
+            y1="21645.5"
+            x2="-2.191"
+            y2="127.857"
+            gradientUnits="objectBoundingBox"
+          >
+            <stop offset="0" stop-color="#1b406d" />
+            <stop offset="1" stop-color="#268ddd" />
+          </linearGradient>
+          <linearGradient
+            id="linear-gradient-2"
+            x1="-688.161"
+            y1="5593.03"
+            x2="673.277"
+            y2="-5463.3"
+            xlink:href="#linear-gradient"
+          />
+          <linearGradient
+            id="linear-gradient-3"
+            x1="0.179"
+            y1="1.018"
+            x2="0.675"
+            y2="-0.006"
+            gradientUnits="objectBoundingBox"
+          >
+            <stop offset="0" stop-color="#1a406d" />
+            <stop offset="0.15" stop-color="#1a406d" />
+            <stop offset="0.83" stop-color="#2e7ac5" />
+            <stop offset="1" stop-color="#2e7ac5" />
+          </linearGradient>
+          <linearGradient
+            id="linear-gradient-4"
+            x1="-653.664"
+            y1="5833.38"
+            x2="654.068"
+            y2="-5830.99"
+            xlink:href="#linear-gradient"
+          />
+          <linearGradient
+            id="linear-gradient-5"
+            x1="-249.054"
+            y1="9637.25"
+            x2="-1.19"
+            y2="65.742"
+            xlink:href="#linear-gradient"
+          />
+          <linearGradient
+            id="linear-gradient-6"
+            x1="-688.518"
+            y1="5487.86"
+            x2="689.374"
+            y2="-5485.5"
+            xlink:href="#linear-gradient"
+          />
+          <linearGradient
+            id="linear-gradient-7"
+            x1="-2.472"
+            y1="37.105"
+            x2="0.239"
+            y2="3.744"
+            xlink:href="#linear-gradient"
+          />
+        </defs>
+        <g id="logo" transform="translate(-646 -2201)">
+          <circle
+            id="Ellipse_11669"
+            data-name="Ellipse 11669"
+            cx="74.5"
+            cy="74.5"
+            r="74.5"
+            transform="translate(646 2201)"
+            fill="#fff"
+          />
+          <g
+            id="LOGO-2"
+            data-name="LOGO"
+            transform="translate(625.194 2241.884)"
+          >
+            <g id="hlthera" transform="translate(64.718)">
+              <path
+                id="Path_94"
+                data-name="Path 94"
+                d="M2688.366,331.538c.328-.762.484-2.228.809-2.228.429,0,1,5.794,1.714,5.794.859,0,2-5.5,2.573-5.5.428,0,.571,2.377,1.143,2.377.429,0,.715-2.377,1.143-2.377.286,0,.571,1.337,1,1.337h.08l.052,0-.048,0,.1,0h-.035l.094,0-.059,0,.065,0H2697l.123.006.035,0,.3-.773h0l-.075-.014h0l-.022,0-.009,0,.008,0c-.03-.006-.059-.014-.09-.023h0a1.04,1.04,0,0,1-.667-.538c-.286-.594-.572-1.188-.858-1.188-.573,0-.857,2.08-1.142,2.08-.429,0-.286-2.377-1-2.377s-2.143,5.5-2.572,5.5c-.571,0-.856-6.24-1.715-6.24-.483,0-1,2.228-1.429,3.565-.1.315-.142.446-.572.446h-5.47l.533.891h4.794C2688.174,332.281,2688.174,331.984,2688.366,331.538Z"
+                transform="translate(-2656.899 -306.432)"
+                fill="none"
+              />
+              <path
+                id="Path_111"
+                data-name="Path 111"
+                d="M2761.332,388.7v32.485h8.716V386.47A54.779,54.779,0,0,1,2761.332,388.7Z"
+                transform="translate(-2718.129 -358.42)"
+                fill="#1a406d"
+              />
+              <path
+                id="Path_96"
+                data-name="Path 96"
+                d="M2747.059,342.31h0l.048,0Z"
+                transform="translate(-2707.131 -317.796)"
+                fill="url(#linear-gradient)"
+              />
+              <path
+                id="Path_97"
+                data-name="Path 97"
+                d="M2749.363,339.05h0l-.007,0Z"
+                transform="translate(-2708.902 -315.314)"
+                fill="url(#linear-gradient-2)"
+              />
+              <g
+                id="Group_45"
+                data-name="Group 45"
+                transform="translate(0 23.506)"
+              >
+                <path
+                  id="Union_1"
+                  data-name="Union 1"
+                  d="M.736,35.3A17.921,17.921,0,0,1,.119,28.09q.05-.464.123-.908a13.481,13.481,0,0,1,2.029-5.538,16.576,16.576,0,0,1,1.408-1.712,18.162,18.162,0,0,1,7.752-4.89c4.561-1.633,8.939-1.737,10.414-2.025C29.06,11.6,43.2,12.05,51.992,9.744a18.574,18.574,0,0,0,4.786-2.157C58.307,6.393,59,5.134,58.837,4.051c-.36-1.6-2.42-2.219-2.42-2.219A14.435,14.435,0,0,0,51.9,1.221c-2.566.055-8.659-.306-8.659-.306h-2.86l.294-.676h2.744L51.9.072h.02V0l.286,0c7.269-.059,9.471,3.771,6.991,7.216a8.6,8.6,0,0,1-1.933,1.97C53.914,11.725,46.2,12.893,46.2,12.893l-2.958.464L26.778,15.421s-4.837.639-5.185.778-8.606,2.279-8.606,2.279S4.04,21,4.417,30.011c-.027,0-.033,5.544,4.05,7.456a9.605,9.605,0,0,0,4.449.465l.653-.008.114-.02a.111.111,0,0,0,0,.019l5.022-.065v5.8h-5.02v.024a9.982,9.982,0,0,1-1.008.043C10.043,43.727,3.015,42.984.736,35.3Z"
+                  transform="translate(0 0)"
+                  fill="url(#linear-gradient-3)"
+                />
+              </g>
+              <g
+                id="Group_42"
+                data-name="Group 42"
+                transform="translate(23.979 17.047)"
+              >
+                <path
+                  id="Path_104818"
+                  data-name="Path 104818"
+                  d="M169.38,32.381a.3.3,0,0,0-.281.153.329.329,0,0,0,0,.329.3.3,0,0,0,.281.153h1.208c-.142-.209-.268-.426-.395-.635Z"
+                  transform="translate(-169.055 -24.324)"
+                  fill="#2e7ac5"
+                />
+                <path
+                  id="Path_104819"
+                  data-name="Path 104819"
+                  d="M177.25,26.18a.306.306,0,0,1,.313-.217.3.3,0,0,1,.277.246l1.394,6.2,1.359-3.3.878-2.13a.291.291,0,0,1,.284-.194h0a.306.306,0,0,1,.284.194l.858,2.225.79-1.939a.308.308,0,0,1,.254-.194.28.28,0,0,1,.284.14l.925,1.465h.619a6.434,6.434,0,0,0,.261-.775c1.126-4.528-3.944-8.435-8.345-3.876-4.4-4.574-9.463-.667-8.337,3.876a7.952,7.952,0,0,0,.917,2.11h5.764Z"
+                  transform="translate(-169.08 -21.987)"
+                  fill="#2e7ac5"
+                />
+                <path
+                  id="Path_104820"
+                  data-name="Path 104820"
+                  d="M185.2,30.789l-.746-1.106-.865,2.088a.3.3,0,0,1-.567,0l-.806-2.211L179.9,35.2a.306.306,0,0,1-.284.194h0a.317.317,0,0,1-.275-.246l-1.38-6.143-.969,3.039a.314.314,0,0,1-.291.217H171.11a32.068,32.068,0,0,0,7.025,6.784s5.779-4.017,7.793-8.109h-.5a.319.319,0,0,1-.232-.154Z"
+                  transform="translate(-169.569 -23.561)"
+                  fill="#2e7ac5"
+                />
+                <path
+                  id="Path_150"
+                  data-name="Path 150"
+                  d="M-4.937,0h2.89V.723L-5.25.695Z"
+                  transform="translate(21.613 6.682)"
+                  fill="#2e7ac5"
+                />
+              </g>
+              <path
+                id="Path_101"
+                data-name="Path 101"
+                d="M2749.39,339.056Z"
+                transform="translate(-2708.929 -315.319)"
+                fill="url(#linear-gradient-4)"
+              />
+              <path
+                id="Path_102"
+                data-name="Path 102"
+                d="M2747.348,342.321l.035,0,.06,0Z"
+                transform="translate(-2707.355 -317.805)"
+                fill="url(#linear-gradient-5)"
+              />
+              <path
+                id="Path_103"
+                data-name="Path 103"
+                d="M2749.482,339.081h0Z"
+                transform="translate(-2708.997 -315.339)"
+                fill="url(#linear-gradient-6)"
+              />
+              <path
+                id="Path_104"
+                data-name="Path 104"
+                d="M2770.045,338.27v1.169q-.349,0-.715.017c-2.62.1-5.7.019-8-.071v-.973Z"
+                transform="translate(-2718.125 -314.721)"
+                stroke="rgba(0,0,0,0)"
+                stroke-width="1"
+                fill="url(#linear-gradient-7)"
+              />
+              <path
+                id="Path_108"
+                data-name="Path 108"
+                d="M2747.939,342.348l-.118-.006Z"
+                transform="translate(-2707.718 -317.82)"
+                opacity="0.21"
+              />
+              <path
+                id="Path_109"
+                data-name="Path 109"
+                d="M2746.911,342.306h0Z"
+                transform="translate(-2706.988 -317.792)"
+                opacity="0.21"
+              />
+              <g
+                id="Group_41"
+                data-name="Group 41"
+                transform="translate(7.058)"
+              >
+                <g id="Group_39" data-name="Group 39">
+                  <g id="Group_38" data-name="Group 38">
+                    <g
+                      id="Group_36"
+                      data-name="Group 36"
+                      transform="translate(5.858)"
+                    >
+                      <rect
+                        id="Rectangle_10"
+                        data-name="Rectangle 10"
+                        width="39.003"
+                        height="4.754"
+                        fill="#1a406d"
+                      />
+                    </g>
+                    <g
+                      id="Group_37"
+                      data-name="Group 37"
+                      transform="translate(0 9.211)"
+                    >
+                      <path
+                        id="Path_105"
+                        data-name="Path 105"
+                        d="M2654.821,277.924h-50.863v1.486h5.858v3.268h39V279.41h6Z"
+                        transform="translate(-2603.957 -277.924)"
+                        fill="#1a406d"
+                      />
+                    </g>
+                  </g>
+                </g>
+                <path
+                  id="Path_107"
+                  data-name="Path 107"
+                  d="M2668.465,439.634v-3.268h-10.858V416.012h-17.144v20.353h-11v4.754h15.572V420.766h8v20.353h21.431v-1.486Z"
+                  transform="translate(-2623.603 -373.899)"
+                  fill="#1a406d"
+                />
+                <g
+                  id="Group_40"
+                  data-name="Group 40"
+                  transform="translate(36.146 13.891)"
+                >
+                  <path
+                    id="Path_110"
+                    data-name="Path 110"
+                    d="M2770.045,297.829h-6.767c-1.378,0-1.949,1.993-1.949,3.007v14.445a69.775,69.775,0,0,0,8.717-1.185Z"
+                    transform="translate(-2761.328 -297.829)"
+                    fill="#1a406d"
+                  />
+                </g>
+                <path
+                  id="Path_106"
+                  data-name="Path 106"
+                  d="M2638.177,297.829h-8.716v48.877h6.768c1.377,0,1.949-2.377,1.949-3.588Z"
+                  transform="translate(-2623.603 -283.942)"
+                  fill="#1a406d"
+                />
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="transforming-reimagining">
+      <div class="transforming animated">
+        <div class="trans-head">
+          <span class="text-blue font-regular-large">{{
+            "transforming_doctors" | translate
+          }}</span>
+          <span class="font-bold-large text-blue">{{
+            "healers" | translate
+          }}</span>
+        </div>
+        <div class="trans-body">
+          <div class="trans-doctors">
+            <svg
+              style="width: 2.5rem"
+              id="Group_116744"
+              data-name="Group 116744"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 46.247 46.247"
+            >
+              <path
+                id="Path_319211"
+                data-name="Path 319211"
+                d="M23.124,0A23.124,23.124,0,1,1,0,23.124,23.124,23.124,0,0,1,23.124,0Z"
+                fill="#f5f7f9"
+              />
+              <g
+                id="Group_116743"
+                data-name="Group 116743"
+                transform="translate(11.16 9.784)"
+              >
+                <path
+                  id="Path_318689"
+                  data-name="Path 318689"
+                  d="M28.76,54.391c.013.027.029.052.042.079a3.822,3.822,0,0,1,.327,1.1,1.775,1.775,0,1,1-.835-.031,3.042,3.042,0,0,0-.832-1.573,7.854,7.854,0,0,0-1.064-.172c-.032,1.44-4.794,4.973-4.794,4.973s-4.762-3.534-4.793-4.973q-.382.035-.752.106a2.937,2.937,0,0,0-1.031,1.56.986.986,0,0,1,.432.51,4.134,4.134,0,0,1,1.9,2.111.576.576,0,0,1,0,.49,6.657,6.657,0,0,1,.493,2.364c0,1.142-.05,1.858-1.007,2.047a.488.488,0,0,1-.342.14h-.736a.493.493,0,0,1-.493-.493v-.01h0a.494.494,0,0,1,.493-.482h.736a.486.486,0,0,1,.206.046c.174-.037.2-.087.219-.114a3.041,3.041,0,0,0,.111-1.133,5.8,5.8,0,0,0-.441-2.077.577.577,0,0,1-.287-.278c-.482-1.009-1.135-1.636-1.7-1.636s-1.265.676-1.745,1.724a.58.58,0,0,1-.334.3,5.679,5.679,0,0,0-.4,1.962,3.055,3.055,0,0,0,.12,1.136c.017.027.051.082.248.118a.493.493,0,0,1,.221-.052h.736a.493.493,0,0,1,.491.464v.03a.493.493,0,0,1-.493.493h-.736A.489.489,0,0,1,12.4,63a1.14,1.14,0,0,1-.832-.495,3.021,3.021,0,0,1-.242-1.566,6.542,6.542,0,0,1,.475-2.314.57.57,0,0,1,.017-.434,5.392,5.392,0,0,1,1.109-1.635A2.944,2.944,0,0,1,13.713,56a.993.993,0,0,1,.5-.565,3.046,3.046,0,0,1,.412-1.114,7.9,7.9,0,0,0-4.98,7.339c0,4.362,3.536,4.351,7.9,4.351h8.134c4.361,0,7.9.011,7.9-4.351A7.9,7.9,0,0,0,28.76,54.391Zm-.337,8.32a.2.2,0,0,1-.207.185H27.089v1.126a.2.2,0,0,1-.185.207H25.792a.2.2,0,0,1-.185-.207V62.9H24.48a.2.2,0,0,1-.207-.185V61.6a.2.2,0,0,1,.207-.185h1.127V60.288a.2.2,0,0,1,.185-.208H26.9a.2.2,0,0,1,.185.208v1.126h1.127a.2.2,0,0,1,.207.185Z"
+                  transform="translate(-9.641 -39.33)"
+                  fill="#1a406d"
+                />
+                <path
+                  id="Path_318690"
+                  data-name="Path 318690"
+                  d="M35.659,5a6.15,6.15,0,0,0-5.974,5.4,6.729,6.729,0,0,0-.069.965c0,.133.005.265.012.4.012.192.03.382.057.569,0,.057.009.114.015.17.381,4.312,2.9,7.644,5.959,7.644s5.578-3.332,5.96-7.644c.005-.057.01-.113.015-.17.027-.187.045-.376.056-.569.007-.131.013-.263.013-.4a6.819,6.819,0,0,0-.069-.965A6.151,6.151,0,0,0,35.659,5Z"
+                  transform="translate(-23.695 -5)"
+                  fill="#f8dcb7"
+                />
+                <circle
+                  id="Ellipse_11663"
+                  data-name="Ellipse 11663"
+                  cx="0.889"
+                  cy="0.889"
+                  r="0.889"
+                  transform="translate(18.118 17.062)"
+                />
+              </g>
+            </svg>
+
+            <span class="sf-pro-font font-regular-medium text-blue">{{
+              "doctors" | translate
+            }}</span>
+          </div>
+
+          <svg
+            class="arraw-svg animated-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="92.417"
+            height="92.627"
+            viewBox="0 0 92.417 92.627"
+          >
+            <path
+              id="Arrow-1"
+              d="M.092,80.847C-.961,58.688,7.05,39.806,23.766,23.516c8.924-8.7,23.4-11.545,28.607,2.413,3.549,9.508,3.969,26.318-6.661,31.521-11.738,5.745-.777-22.339.947-25.125,8.068-13.042,18.034-21.337,30.7-29.336,4.746-3,1.461-3.378-2.206-2.705a39.052,39.052,0,0,0-9.7,2.743c-.889.431,5.279-1.111,6.241-1.4C75.818.377,80.621-.9,81.1,4.854c.076.92.044,9.58-1.217,9.9-.658.166-3.752-5.135-4.344-5.766-3.822-4.1-6.983-5.343-12.368-4.633"
+              transform="translate(81.404 1.114) rotate(83)"
+              fill="none"
+              stroke="#2e7ac5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </svg>
+
+          <div class="trans-healers">
+            <span class="sf-pro-font text-blue font-regular-large">{{
+              "healers" | translate
+            }}</span>
+
+            <svg
+              style="width: 2.8rem"
+              id="Component_1_1"
+              data-name="Component 1 – 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 55.759 55.759"
+            >
+              <path
+                id="Path_319212"
+                data-name="Path 319212"
+                d="M27.88,0A27.88,27.88,0,1,1,0,27.88,27.88,27.88,0,0,1,27.88,0Z"
+                fill="#f5f7f9"
+              />
+              <g
+                id="Group_116701"
+                data-name="Group 116701"
+                transform="translate(13.476 12.009)"
+              >
+                <path
+                  id="Path_101"
+                  data-name="Path 101"
+                  d="M255.938,42.2a7.043,7.043,0,1,1-8.473-5.237,7.044,7.044,0,0,1,8.473,5.237"
+                  transform="translate(-234.68 -36.769)"
+                  fill="#f8dcb7"
+                />
+                <path
+                  id="Path_102"
+                  data-name="Path 102"
+                  d="M152.515,259.755a3.432,3.432,0,0,0-1.72-.487,3.472,3.472,0,0,0-2.386.945,6.56,6.56,0,0,1-9.444.01,3.412,3.412,0,0,0-2.071-.947,3.494,3.494,0,0,0-2.054.479c-1.843,1.126-5.566,4.59-5.566,14.207,0,.379.006.745.017,1.1a1.477,1.477,0,0,0,1.479,1.428h25.815a1.477,1.477,0,0,0,1.479-1.427c.01-.355.017-.721.017-1.1,0-9.618-3.723-13.082-5.566-14.208Zm-.643,10.568H150.1V272.1h-2.282v-1.775H146.04v-2.282h1.775v-1.775H150.1v1.775h1.775Z"
+                  transform="translate(-129.275 -244.749)"
+                  fill="#1a406d"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="reimagining animated">
+        <div class="reimagin-head">
+          <span class="text-blue font-regular-large">{{
+            "reimagining_hospitals_as" | translate
+          }}</span>
+          <span class="font-bold-large text-blue">{{
+            "health_centres" | translate
+          }}</span>
+        </div>
+        <div class="reimagin-body">
+          <div class="reimagin-hospitals">
+            <span class="sf-pro-font font-regular-medium text-blue">{{
+              "hospitals" | translate
+            }}</span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              style="width: 2.5rem"
+              viewBox="0 0 46.247 46.247"
+            >
+              <g
+                id="Group_116744"
+                data-name="Group 116744"
+                transform="translate(-4 -2)"
+              >
+                <path
+                  id="Path_319214"
+                  data-name="Path 319214"
+                  d="M23.124,0A23.124,23.124,0,1,1,0,23.124,23.124,23.124,0,0,1,23.124,0Z"
+                  transform="translate(4 2)"
+                  fill="#f5f7f9"
+                />
+                <g
+                  id="Group_116747"
+                  data-name="Group 116747"
+                  transform="translate(16.405 14.864)"
+                >
+                  <path
+                    id="Path_318691"
+                    data-name="Path 318691"
+                    d="M40.793,61.516v6.85h2.119V61.058H41.253a.457.457,0,0,0-.46.457Z"
+                    transform="translate(-32.531 -47.848)"
+                    fill="#8794aa"
+                  />
+                  <path
+                    id="Path_318692"
+                    data-name="Path 318692"
+                    d="M9.824,46.3V56.359h3.121V44.683L10.5,45.4a.944.944,0,0,0-.674.9Z"
+                    transform="translate(-9.824 -35.842)"
+                    fill="#2e7ac5"
+                  />
+                  <path
+                    id="Path_318693"
+                    data-name="Path 318693"
+                    d="M41.638,17.631a3.044,3.044,0,1,0-3.044-3.044A3.046,3.046,0,0,0,41.638,17.631Zm-1.216-3.383H41.3v-.874a.34.34,0,1,1,.679,0v.875h.875a.34.34,0,0,1,0,.679h-.875v.878a.34.34,0,1,1-.679,0v-.879h-.878a.34.34,0,1,1,0-.679Z"
+                    transform="translate(-30.918 -11.543)"
+                    fill="#c31e1e"
+                  />
+                  <path
+                    id="Path_318694"
+                    data-name="Path 318694"
+                    d="M80.511,45.28l-2.6-.761V56.241h3.271V46.183a.944.944,0,0,0-.674-.9Z"
+                    transform="translate(-59.748 -35.722)"
+                    fill="#2e7ac5"
+                  />
+                  <path
+                    id="Path_318695"
+                    data-name="Path 318695"
+                    d="M36.787,22.031H34.659c.006.086.05.159.05.247a3.723,3.723,0,1,1-7.445,0c0-.088.044-.16.05-.247H25.032a.965.965,0,0,0-.965.965V39.751h3.784V32.9a1.14,1.14,0,0,1,1.137-1.137h4A1.14,1.14,0,0,1,34.121,32.9v6.85h3.634V23a.968.968,0,0,0-.969-.965Z"
+                    transform="translate(-20.267 -19.233)"
+                    fill="#1a406d"
+                  />
+                  <path
+                    id="Path_318696"
+                    data-name="Path 318696"
+                    d="M52.934,61.059H51.277v7.309h2.116V61.517a.457.457,0,0,0-.459-.457Z"
+                    transform="translate(-40.218 -47.849)"
+                    fill="#8794aa"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+
+          <svg
+            class="arraw-svg animated-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            width="90.573"
+            height="91.297"
+            viewBox="0 0 90.573 91.297"
+          >
+            <path
+              id="Arrow-1"
+              d="M.09,0C-.948,21.688,6.952,40.168,23.436,56.112c8.8,8.514,23.075,11.3,28.209-2.362,3.5-9.306,3.914-25.759-6.568-30.851C33.5,17.276,44.31,44.763,46.01,47.49,53.966,60.255,63.793,68.374,76.286,76.2c4.68,2.933,1.441,3.306-2.175,2.648a38.732,38.732,0,0,1-9.566-2.685c-.877-.422,5.206,1.087,6.154,1.372,4.064,1.221,8.8,2.47,9.27-3.16.075-.9.043-9.376-1.2-9.688-.649-.162-3.7,5.026-4.284,5.643-3.769,4.008-6.886,5.229-12.2,4.535"
+              transform="translate(89.413 10.758) rotate(97)"
+              fill="none"
+              stroke="#2e7ac5"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+          </svg>
+
+          <div class="reimagin-health-center">
+            <span class="sf-pro-font text-blue font-regular-large">{{
+              "health_centres" | translate
+            }}</span>
+
+            <svg
+              id="Component_2_1"
+              data-name="Component 2 – 1"
+              xmlns="http://www.w3.org/2000/svg"
+              style="width: 2.8rem"
+              viewBox="0 0 55.759 55.759"
+            >
+              <path
+                id="Path_319213"
+                data-name="Path 319213"
+                d="M27.88,0A27.88,27.88,0,1,1,0,27.88,27.88,27.88,0,0,1,27.88,0Z"
+                fill="#f5f7f9"
+              />
+              <g
+                id="noun-hospital-5344099"
+                transform="translate(14.349 15.886)"
+              >
+                <circle
+                  id="Ellipse_1"
+                  data-name="Ellipse 1"
+                  cx="2.178"
+                  cy="2.178"
+                  r="2.178"
+                  transform="translate(11.353 6.014)"
+                  fill="#c31e1e"
+                />
+                <path
+                  id="Path_83"
+                  data-name="Path 83"
+                  d="M301.7,160.493a2.636,2.636,0,1,0-2.625-2.639A2.633,2.633,0,0,0,301.7,160.493Zm-1.109-3.09h.658v-.658a.451.451,0,1,1,.9,0v.658h.658a.451.451,0,0,1,0,.9h-.658v.663a.451.451,0,1,1-.9,0v-.663h-.658a.451.451,0,1,1,0-.9Z"
+                  transform="translate(-288.168 -149.659)"
+                  fill="#fff"
+                />
+                <path
+                  id="Path_84"
+                  data-name="Path 84"
+                  d="M93.788,173.07H87.951a.452.452,0,0,0-.451.451v16.6a.452.452,0,0,0,.451.451h5.918a1.249,1.249,0,0,1-.081-.451Zm-1.84,14.411H89.422a.451.451,0,0,1,0-.9h2.526a.451.451,0,1,1,0,.9Zm0-2.607H89.422a.451.451,0,0,1,0-.9h2.526a.451.451,0,0,1,0,.9Zm0-2.6H89.422a.451.451,0,0,1,0-.9h2.526a.451.451,0,1,1,0,.9Zm0-2.6H89.422a.451.451,0,0,1,0-.9h2.526a.451.451,0,0,1,0,.9Zm0-2.6H89.422a.451.451,0,0,1,0-.9h2.526a.451.451,0,0,1,0,.9Z"
+                  transform="translate(-87.5 -166.589)"
+                  fill="#2e7ac5"
+                />
+                <path
+                  id="Path_85"
+                  data-name="Path 85"
+                  d="M494.864,173.07h-5.837v17.054a1.248,1.248,0,0,1-.081.451h5.918a.452.452,0,0,0,.451-.451v-16.6a.452.452,0,0,0-.451-.451Zm-1.47,14.411h-2.526a.451.451,0,1,1,0-.9h2.526a.451.451,0,1,1,0,.9Zm0-2.607h-2.526a.451.451,0,0,1,0-.9h2.526a.451.451,0,0,1,0,.9Zm0-2.6h-2.526a.451.451,0,1,1,0-.9h2.526a.451.451,0,1,1,0,.9Zm0-2.6h-2.526a.451.451,0,1,1,0-.9h2.526a.451.451,0,1,1,0,.9Zm0-2.6h-2.526a.451.451,0,1,1,0-.9h2.526a.451.451,0,1,1,0,.9Z"
+                  transform="translate(-468.252 -166.589)"
+                  fill="#2e7ac5"
+                />
+                <path
+                  id="Path_86"
+                  data-name="Path 86"
+                  d="M210.636,50.447a.452.452,0,0,0,.451-.451v-2.21a.452.452,0,0,0-.451-.451H195.571a.452.452,0,0,0-.451.451V50a.452.452,0,0,0,.451.451h1.191V70.87a.452.452,0,0,0,.451.451h11.781a.452.452,0,0,0,.451-.451V50.447Zm-14.614-2.21h14.163v1.308H196.022Zm10.564,13.671h-6.964a.451.451,0,0,1,0-.9h6.964a.451.451,0,0,1,0,.9Zm-7.009-6.378a3.527,3.527,0,1,1,3.527,3.541A3.537,3.537,0,0,1,199.576,55.53Zm1.516,14.889V64.745h4.023v5.674Z"
+                  transform="translate(-189.572 -47.335)"
+                  fill="#1a406d"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section class="about_us animated">
+    <div class="about-content">
+      <h2 class="text-blue">{{ "about_us" | translate }}</h2>
+      <div class="content">
+        <p class="text-grey font-regular-large sf-pro-font">
+          {{ "about_us_content" | translate }}
+        </p>
+
+        <helthera-link-button
+          type="secondary"
+          [label]="'about_us' | translate"
+          (clicked)="goTostayTuned()"
+        >
+        </helthera-link-button>
+      </div>
+    </div>
+    <div class="img" [replaceSvg]="aboutUsSvg"></div>
+  </section>
+
+  <!-- testemonials -->
+  <section class="testemonials">
+    <div class="testemonials-content">
+      <div class="testemonials-head">
+        <h2 class="text-blue">{{ "testemonials" | translate }}</h2>
+        <span class="text-light-grey sf-pro-font font-regular-medium">{{
+          "what_our_users_are_saying" | translate
+        }}</span>
+      </div>
+      <div class="testemonials-body">
+        <div class="heart-image">
+          <img
+            src="../../../../../assets/images/user-{{
+              selectedTestimonial.id
+            }}.jpg"
+            class="heart"
+          />
+        </div>
+        <div [replaceSvg]="testimonial_Shape"></div>
+      </div>
+      <p class="description text-grey font-regular-large sf-pro-font">
+        {{ selectedTestimonial.description }}
+      </p>
+      <div class="testemonials-slider-button">
+        <div
+          class="slider-button"
+          [replaceSvg]="testimonialArrawLeft"
+          (click)="swap('left')"
+        ></div>
+
+        <div
+          class="slider-button"
+          [replaceSvg]="testimonialArrawRight"
+          (click)="swap('right')"
+        ></div>
+      </div>
+    </div>
+    <div class="tls-users-list">
+      <div
+        class="user-item d-flex"
+        *ngFor="let user of testemonialsUsers"
+        (click)="setestimonial(user)"
+        [ngClass]="{ active: selectedTestimonial.id === user.id }"
+      >
+        <img
+          src="../../../../../assets/images/user-{{ user.id }}.jpg"
+          class="heart"
+        />
+        <p class="font-bold-small sf-pro-font text-grey mx-2">
+          {{ user.name }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="stay_informed">
+    <div class="form">
+      <h2 class="text-white">{{ "stay_informed" | translate }}</h2>
+      <div class="form-body">
+        <input
+          type="text"
+          placeholder="{{ 'enter_email_address' | translate }}"
+        />
+
+        <helthera-link-button
+          type="secondary"
+          [label]="'subscribe' | translate"
+          [icon]="false"
+        >
+        </helthera-link-button>
+      </div>
+    </div>
+  </section>
+</main>

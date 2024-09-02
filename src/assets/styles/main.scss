@@ -1,0 +1,35 @@
+@import "base/index";
+@import "abstracts/index";
+@import "components/index.scss";
+
+html {
+  font-size: 87.5%; // 14px
+}
+
+body {
+  @include font($fs-base);
+}
+.helthera-main-container {
+  background-color: $white;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 $vertical-site-padding;
+  overflow-x: hidden;
+  .main {
+    margin-top: 6.5rem;
+  }
+}
+
+html,
+body,
+.p-component {
+  font-family: corben, sf-pro-display;
+  [dir="rtl"] & {
+    font-family: "cairo", sf-pro-display;
+  }
+}
+
+[class^="dfb-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon", sans-serif !important;
+}

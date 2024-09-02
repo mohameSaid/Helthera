@@ -1,0 +1,224 @@
+@import "../../../assets/styles/abstracts/index.scss";
+@import "../../../assets/styles/base/index.scss";
+
+$header-margin: 1.8%; // Adjust as needed
+$transition-duration: 0.5s;
+$nav-gap: 1.5rem;
+
+@mixin transition($duration) {
+  transition: $duration;
+}
+
+header {
+  padding-block: 1rem 1.5rem;
+  position: fixed;
+  z-index: 20;
+  width: calc(100% - 2 * #{$header-margin});
+  left: $header-margin;
+  & * {
+    @include transition(0.7s);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4.65rem;
+    padding: 0.2rem 0.6rem;
+    background-color: $support-pale-grey;
+    ul.nav-bar {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: $nav-gap;
+
+      li {
+        position: relative;
+
+        &:first-child {
+          h2 {
+            // @include font(1rem, bold);
+            @include responsive(mobile) {
+              display: none;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          width: 1.25rem;
+          height: 0.8rem;
+
+          .togel-icon {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            cursor: pointer;
+
+            span {
+              display: block;
+              height: 0.15rem;
+              background-color: $support-grey;
+              border-radius: 1rem;
+              @include transition(0.3s);
+
+              &:first-child {
+                width: 60%;
+                align-self: flex-end;
+              }
+              &:nth-child(2) {
+                width: 100%;
+              }
+              &:last-child {
+                width: 60%;
+                height: 0.14rem;
+              }
+            }
+
+            &:hover {
+              span {
+                width: 100%;
+              }
+            }
+          }
+
+          .togel-menue {
+            height: 100vh;
+            position: absolute;
+            background-color: $primary-light;
+            @include transition($transition-duration);
+            right: -100%;
+            top: 0;
+            z-index: 99;
+            padding: 2rem;
+            min-width: calc(25vw + 3.68rem);
+            margin-right: -3.68rem;
+
+            ul {
+              list-style: none;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              li {
+                &:last-child {
+                  img {
+                    cursor: pointer;
+                    @include transition(0.5s);
+
+                    &:hover {
+                      transform: rotate(360deg);
+                    }
+                  }
+                }
+              }
+            }
+
+            &.expand-menue {
+              right: 0;
+              display: block;
+            }
+
+            @include responsive(mobile) {
+              height: calc(100vh - 101px);
+              width: 100%;
+              top: 100%;
+              right: -100%;
+              margin: 0;
+
+              ul li span {
+                display: block;
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          .lang-icon {
+            svg {
+              width: 80%;
+              cursor: pointer;
+              @include transition(0.4s);
+
+              &:hover {
+                transform: rotate(180deg);
+              }
+            }
+
+            #lang-menue {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+              position: absolute;
+              z-index: 100;
+              background-color: $primary-light;
+              border-radius: 0.5rem;
+              left: -50%;
+              opacity: 0;
+              @include transition($transition-duration);
+              display: none;
+
+              option {
+                cursor: pointer;
+                font-size: 1rem;
+                color: $support-grey;
+                padding: 0.75rem;
+                border-radius: 0.5rem;
+
+                &:hover {
+                  background-color: $secondary-light;
+                }
+              }
+
+              &.lang-menue-expand {
+                display: block;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .main-logo {
+      padding-inline-start: 1rem;
+
+      svg {
+        width: 7rem;
+      }
+    }
+  }
+
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.705);
+    position: absolute;
+    z-index: 98;
+    top: 0;
+    display: none;
+    margin-left: -3.68rem;
+
+    @include responsive(mobile) {
+      margin: 0;
+    }
+
+    &.visibel-overlay {
+      display: block;
+
+      @include responsive(mobile) {
+        display: none;
+      }
+    }
+  }
+}
+
+#header.sticky {
+  nav {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+
+    .main-logo {
+      svg {
+        width: 6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@import "../abstracts/index.scss";
+
+/*-------- Corben font -----------*/
+
+@font-face {
+  font-family: "corben";
+  font-weight: 400;
+  src: url("../../fonts/Corben/Corben-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: "corben";
+  font-weight: 500;
+  src: url("../../fonts/Corben/Corben-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: "corben";
+  font-weight: bold;
+  src: url("../../fonts/Corben/Corben-Bold.ttf") format("opentype");
+}
+/*--------- corben font ---------*/
+/*-------- Pro Dispaly font -----------*/
+@font-face {
+  font-family: "sf-pro-display";
+  font-weight: 400;
+  src: url("../../fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF")
+    format("opentype");
+}
+@font-face {
+  font-family: "sf-pro-display";
+  font-weight: 500;
+  src: url("../../fonts/sf-pro-display/SFPRODISPLAYMEDIUM.OTF")
+    format("opentype");
+}
+@font-face {
+  font-family: "sf-pro-display";
+  font-weight: bold;
+  src: url("../../fonts/sf-pro-display/SFPRODISPLAYBOLD.OTF") format("opentype");
+}
+
+/*--------- Pro display font ---------*/
+
+:root {
+  --icon: 3rem; //48px
+  --h-1: 2rem; // 32px
+  --h-2: 1.5rem; // 24px
+  --h-3: 1.25rem; // 20px
+  --h-4: 1rem; // 16px
+  --h-5: 0.875rem; // 14px
+
+  /* Font sizes for screens bigger than mobile */
+  --fs-regular-Xlarge: #{$fs-xl}; // 24px;
+  --fs-regular-large: #{$fs-lg}; // 20px;
+  --fs-regular-medium: #{$fs-sm}; // 14px;
+  --fs-regular-small: #{$fs-xs}; // 12px;
+
+  --fs-bold-Xlarge: #{$fs-xl}; // 24px;
+  --fs-bold-large: #{$fs-lg}; // 20px;
+  --fs-bold-medium: #{$fs-sm}; // 14px;
+  --fs-bold-small: #{$fs-xs}; // 12px;
+}
+
+.mobile-screen {
+  --icon: 2rem; //32px
+  --h-1: 1.25rem; // 20px
+  --h-2: 1.125rem; // 18px
+  --h-3: 1rem; // 16px
+  --h-4: 0.875rem; // 14px
+  --h-5: 0.75rem; // 12px
+
+  /* Font sizes for mobile screen only */
+  --fs-regular-large: #{$fs-sm}; // 14px;
+  --fs-regular-medium: #{$fs-xs}; // 12px;
+  --fs-regular-small: #{$fs-xxs}; // 10px;
+
+  --fs-bold-large: #{$fs-base}; // 16px;
+  --fs-bold-medium: #{$fs-sm}; // 14px;
+  --fs-bold-small: #{$fs-xs}; // 12px;
+}
+
+/*-------- Heading Font sizes -----------*/
+
+h1 {
+  @include font(var(--h-1), $fw-bold, corben, 38px);
+}
+
+h2,
+.font-h2 {
+  @include font(var(--h-2), $fw-bold, corben, 38px);
+}
+
+h3 {
+  @include font(var(--h-3), $fw-bold, corben, 30px);
+}
+h4 {
+  @include font(var(--h-4), $fw-bold, corben, 30px);
+}
+
+/*-------- Text Font sizes -----------*/
+
+// Regular
+.font-regular-xl {
+  @include font($fs-regular-Xlarge, $fw-regular);
+}
+.font-regular-large {
+  @include font($fs-regular-large, $fw-regular);
+}
+.font-regular-medium {
+  @include font($fs-regular-medium, $fw-regular);
+}
+.font-regular-small {
+  @include font($fs-regular-small, $fw-regular);
+}
+
+// Bold
+.font-bold-xl {
+  @include font($fs-bold-Xlarge, $fw-bold);
+}
+.font-bold-large {
+  @include font($fs-bold-large, $fw-bold);
+}
+.font-bold-medium {
+  @include font($fs-bold-medium, $fw-bold);
+}
+.font-bold-small {
+  @include font($fs-bold-small, $fw-bold);
+}
+
+// for Rate and Face Rate
+.font-icon {
+  @include font($fw-medium, var(--icon), 60px);
+}
+
+.corben-font {
+  font-family: "corben";
+}
+.sf-pro-font {
+  font-family: "sf-pro-display";
+}
+
+.inherit-font-family *:not([class^="dfb-icon-"]) {
+  font-family: inherit;
+}

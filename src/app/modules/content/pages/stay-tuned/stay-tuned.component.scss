@@ -1,0 +1,18 @@
+@import "../../../../../assets/styles/abstracts/index.scss";
+@import "../../../../../assets/styles/base/index.scss";
+
+.stay-tuned-wrapper {
+  background: linear-gradient(to bottom, #001428, #2e7ac5);
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  .landing-content {
+    min-height: 40rem;
+    @include flex-center-all;
+    flex-direction: column;
+    gap: 2rem;
+
+    .description {
+      @include font(1rem, $white, 400, sf-pro-display);
+    }
+  }
+}

@@ -1,0 +1,32 @@
+:root {
+  --header-height: 56px;
+}
+
+$vertical-site-padding: 2rem;
+
+// Font Size
+$fs-xxs: 0.625rem; // 10px
+$fs-xs: 0.75rem; // 12px
+$fs-sm: 0.875rem; // 14px
+$fs-base: 1rem; // 16px
+$fs-lg: 1.25rem; // 20px
+$fs-xl: 1.5rem; // 24px
+$fs-xxl: 1.875rem; // 30px
+$fs-xxxl: 2rem; // 32px
+
+$fs-regular-Xlarge: var(--fs-regular-Xlarge, $fs-base) !default; // 24px;
+$fs-regular-large: var(--fs-regular-large, $fs-lg) !default; // 16px;
+$fs-regular-medium: var(--fs-regular-medium, $fs-sm) !default; // 14px;
+$fs-regular-small: var(--fs-regular-small, $fs-xs) !default; // 12px;
+
+$fs-bold-Xlarge: var(--fs-medium-Xlarge, $fs-base) !default; // 16px;
+$fs-bold-large: var(--fs-medium-large, $fs-lg) !default; // 16px;
+$fs-bold-medium: var(--fs-medium-medium, $fs-sm) !default; // 14px;
+$fs-bold-small: var(--fs-medium-small, $fs-xs) !default; // 12px;
+
+/* Font Weight */
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;

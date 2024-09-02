@@ -1,0 +1,66 @@
+@import "../../../../../assets/styles/abstracts/index.scss";
+@import "../../../../../assets/styles/base/index.scss";
+
+.main-link-button {
+  border: none;
+  color: $white;
+  background-color: $primary-main;
+  width: 10.5rem;
+  height: 3.4rem;
+  border-radius: 1.875rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
+  align-items: center;
+  padding-inline: 1.6rem 0.7rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  &.includ-icon {
+    justify-content: space-between;
+  }
+  &:hover {
+    background-color: darken(
+      $primary-main,
+      10%
+    ); // Darken button color on hover
+    transform: scale(1.05); // Slightly enlarge the button
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); // Increase shadow for hover effect
+  }
+
+  &--primary {
+    background-color: $primary-main;
+  }
+
+  &--secondary {
+    background-color: $secondary-main;
+  }
+  .lable {
+    font-family: "sf-pro-display";
+  }
+
+  .arraw-icon {
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    background-color: $white;
+    border-radius: 50%;
+    width: 1.7rem;
+    height: 1.7rem;
+    position: relative;
+    svg {
+      position: absolute;
+      top: 2px;
+      left: 5px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .main-link-button:hover & {
+      background-color: lighten(
+        $primary-main,
+        10%
+      ); // Lighten icon background color on hover
+      transform: rotate(360deg); // Rotate the icon
+    }
+  }
+}
