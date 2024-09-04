@@ -6,7 +6,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../shared/shared.module';
 import { ReplaceSvgDirective } from './directives/replace-svg';
 import { StayTunedComponent } from './pages/stay-tuned/stay-tuned.component';
-
+ 
 @NgModule({
   declarations: [...Content_Pages, ReplaceSvgDirective, StayTunedComponent],
   imports: [CommonModule, ContentRoutingModule, TranslateModule, SharedModule],
