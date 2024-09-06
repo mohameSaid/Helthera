@@ -1,0 +1,43 @@
+.circle-container {
+    position: relative;
+    width: 300px; /* Adjust based on your needs */
+    height: 300px;
+    animation: rotate 10s linear infinite; /* Rotates every 10 seconds, infinitely */
+}
+
+.circle-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+}
+
+/* Rotating individual letters around the circle */
+.circle-text span {
+    position: absolute;
+    width: 6px;
+    height: 28px;
+    transform-origin: 150px 44px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.circle-text span:nth-child(1)  { transform: rotate(13deg) translateX(150px); }
+.circle-text span:nth-child(2)  { transform: rotate(28deg) translateX(150px); }
+.circle-text span:nth-child(3)  { transform: rotate(40deg) translateX(150px); }
+.circle-text span:nth-child(4)  { transform: rotate(49deg) translateX(150px); }
+.circle-text span:nth-child(5)  { transform: rotate(60deg) translateX(150px); }
+/* Continue with your nth-child styles as before */
+
+/* Keyframes for rotating the circle infinitely */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

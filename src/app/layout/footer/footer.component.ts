@@ -1,4 +1,6 @@
 import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { SochialIcons } from '../constants/svg/sochial-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'helthera-footer',
@@ -6,7 +8,11 @@ import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
+  sochialIcons = SochialIcons;
   @ViewChildren('listContainer') listContainers!: QueryList<ElementRef>;
+
+  constructor(private router: Router) {}
+
   // Called after the component's view has been initialized
   ngAfterViewInit(): void {
     this.setupFooterListToggle();
@@ -22,5 +28,9 @@ export class FooterComponent {
         });
       }
     });
+  }
+
+  goTostayTuned(): void {
+    this.router.navigate(['content/stay-tuned']);
   }
 }

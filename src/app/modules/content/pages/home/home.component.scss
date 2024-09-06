@@ -623,6 +623,9 @@ section {
 .testemonials {
   margin-inline: -$vertical-site-padding;
   display: flex;
+  background: linear-gradient(180deg, #f5f7f9 0%, #ffffff 100%);
+  position: relative;
+  padding-top: 4rem;
   .testemonials-content,
   .testemonials-head {
     display: flex;
@@ -683,6 +686,8 @@ section {
     justify-content: center;
     position: absolute;
     right: 0;
+    top: 20%;
+
     & * {
       transition: 0.6s;
     }

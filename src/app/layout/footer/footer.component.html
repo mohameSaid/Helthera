@@ -326,27 +326,33 @@
       <div id="list-container" class="footer-slice col-3">
         <h3>{{ "hlthera" | translate }}</h3>
         <ul>
-          <li>{{ "hlthera" | translate }}</li>
-          <li>{{ "hlthera_engage" | translate }}</li>
-          <li>{{ "hlthera_professional_services" | translate }}</li>
-          <li>{{ "hlthera_foundation" | translate }}</li>
+          <li (click)="goTostayTuned()">{{ "hlthera" | translate }}</li>
+          <li (click)="goTostayTuned()">{{ "hlthera_engage" | translate }}</li>
+          <li (click)="goTostayTuned()">
+            {{ "hlthera_professional_services" | translate }}
+          </li>
+          <li (click)="goTostayTuned()">
+            {{ "hlthera_foundation" | translate }}
+          </li>
         </ul>
       </div>
       <div id="list-container" class="footer-slice col-3">
         <h3>{{ "for_providers" | translate }}</h3>
         <ul>
-          <li>{{ "healers" | translate }}</li>
-          <li>{{ "health_centers" | translate }}</li>
+          <li (click)="goTostayTuned()">{{ "healers" | translate }}</li>
+          <li (click)="goTostayTuned()">{{ "health_centers" | translate }}</li>
         </ul>
       </div>
       <div id="list-container" class="footer-slice col-3">
         <h3>{{ "company" | translate }}</h3>
         <ul>
-          <li>{{ "meet_the_team" | translate }}</li>
-          <li>{{ "careers" | translate }}</li>
-          <li>{{ "contact_us" | translate }}</li>
-          <li>{{ "terms_&_conditions" | translate }}</li>
-          <li>{{ "privacy_policy" | translate }}</li>
+          <li (click)="goTostayTuned()">{{ "meet_the_team" | translate }}</li>
+          <li (click)="goTostayTuned()">{{ "careers" | translate }}</li>
+          <li (click)="goTostayTuned()">{{ "contact_us" | translate }}</li>
+          <li (click)="goTostayTuned()">
+            {{ "terms_&_conditions" | translate }}
+          </li>
+          <li (click)="goTostayTuned()">{{ "privacy_policy" | translate }}</li>
         </ul>
       </div>
     </nav>
@@ -355,20 +361,33 @@
         <p>Copyright © 2024 Hlthera FZCO. All rights reserved.</p>
       </div>
       <div class="social-icons">
-        <a href="https://www.facebook.com/Hlthera" target="_blank">
-          <img src="../../../assets/images/facebook.png" alt="Facebook Icon" />
+        <a
+          class="sochial-icon"
+          href="https://www.facebook.com/Hlthera"
+          target="_blank"
+        >
+          <div [replaceSvg]="sochialIcons.facbook"></div>
         </a>
         <a
+          class="sochial-icon"
           href="https://www.instagram.com/hlthera/?igshid=o95lr2j1w67z"
           target="_blank"
         >
-          <img src="../../../assets/images/instagram.png" alt="Instagram Icon" />
+          <div [replaceSvg]="sochialIcons.instigram"></div>
         </a>
-        <a href="https://x.com/hlthera?s=11" target="_blank">
-          <img src="../assets/images/x.png" alt="X Icon" />
+        <a
+          class="sochial-icon"
+          href="https://x.com/hlthera?s=11"
+          target="_blank"
+        >
+          <div [replaceSvg]="sochialIcons.twitter"></div>
         </a>
-        <a href="https://www.linkedin.com/company/hlthera/" target="_blank">
-          <img src="../../../assets/images/linkedin.png" alt="Linkedin Icon" />
+        <a
+          class="sochial-icon"
+          href="https://www.linkedin.com/company/hlthera/"
+          target="_blank"
+        >
+          <div [replaceSvg]="sochialIcons.linkedIn"></div>
         </a>
       </div>
     </div>
