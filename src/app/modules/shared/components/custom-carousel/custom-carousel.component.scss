@@ -1,0 +1,12 @@
+@import "../../../../../assets/styles/abstracts/index.scss";
+@import "../../../../../assets/styles/base/index.scss";
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .caption {
+    margin-inline-start: 4rem;
+    margin-bottom: 5rem;
+  }
+}

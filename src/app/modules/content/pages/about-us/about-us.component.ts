@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AboutUsSvgs } from '../../constants/about-us-svgs';
+import { CarosalItem } from 'src/app/modules/shared/interfaces';
 
 @Component({
   selector: 'helthera-about-us',
@@ -9,7 +10,20 @@ import { AboutUsSvgs } from '../../constants/about-us-svgs';
 })
 export class AboutUsComponent {
   svgs = AboutUsSvgs;
+  carosalData!: CarosalItem[];
+
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.carosalData = [
+      {
+        svg: this.svgs.landingShape,
+        caption: 'Our Journey, your health.',
+      },
+      {
+        svg: this.svgs.landingShape,
+        caption: 'Our Journey, your health.',
+      },
+    ];
+  }
 }

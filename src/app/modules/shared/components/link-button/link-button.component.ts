@@ -7,6 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class LinkButtonComponent {
   @Input() label: string = '';
+  @Input() size: string = '';
   @Input() type: 'primary' | 'secondary' = 'primary';
   @Input() icon: boolean = true;
 

@@ -3,6 +3,7 @@
 }
 
 $vertical-site-padding: 2rem;
+$contnt-padding-insid-container:4rem;
 
 // Font Size
 $fs-xxs: 0.625rem; // 10px
@@ -16,7 +17,7 @@ $fs-xxxl: 2rem; // 32px
 
 $fs-regular-Xlarge: var(--fs-regular-Xlarge, $fs-base) !default; // 24px;
 $fs-regular-large: var(--fs-regular-large, $fs-lg) !default; // 16px;
-$fs-regular-medium: var(--fs-regular-medium, $fs-sm) !default; // 14px;
+$fs-regular-medium: var(--fs-regular-medium, $fs-base) !default; // 16px;
 $fs-regular-small: var(--fs-regular-small, $fs-xs) !default; // 12px;
 
 $fs-bold-Xlarge: var(--fs-medium-Xlarge, $fs-base) !default; // 16px;

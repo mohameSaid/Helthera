@@ -2,8 +2,8 @@ export const About_Us_Shape = `<svg
       class="shape"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="350"
-      height="300"
+      width="400"
+      height="350"
       viewBox="0 0 401.873 426.364"
     >
       <defs>

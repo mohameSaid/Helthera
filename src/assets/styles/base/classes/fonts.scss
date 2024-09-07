@@ -1,0 +1,33 @@
+// colors
+.primary-main {
+  color: $primary-main;
+}
+.primary-dark {
+  color: $primary-dark;
+}
+.text-grey {
+  color: $text-grey;
+}
+.text-light-grey {
+  color: $text-grey-2;
+}
+.text-white {
+  color: $white;
+}
+.text-blue {
+  color: $text-blue;
+}
+.gradient-text {
+  background: linear-gradient(179deg, $text-blue 0%, $primary-main 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// font weight
+.fw-bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}

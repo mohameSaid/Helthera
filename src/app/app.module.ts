@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LayoutModule } from './layout/layout.module';
-import { SharedModule } from './modules/shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // <-- Import this
 
 // AOT compilation support
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -18,6 +18,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule, // Add HttpClientModule here
     AppRoutingModule,
     LayoutModule,

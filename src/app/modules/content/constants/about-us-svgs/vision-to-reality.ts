@@ -1,4 +1,4 @@
-export const visionToReality = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="232.011" height="318.497" viewBox="0 0 232.011 318.497">
+export const visionToReality = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  width="200" height="230" viewBox="0 0 232.011 318.497">
   <defs>
     <linearGradient id="linear-gradient" x1="-457.232" y1="21645.5" x2="-2.191" y2="127.857" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#1b406d"/>

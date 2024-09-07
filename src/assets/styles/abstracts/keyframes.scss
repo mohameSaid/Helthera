@@ -1,11 +1,29 @@
 @keyframes colorChange {
+  0% {
+    stroke: #2e7ac5;
+  }
+  50% {
+    stroke: #2e7ac5d4;
+  }
+  100% {
+    stroke: #1a3f6d8f;
+  }
+}
+
+@keyframes moveInSquare {
     0% {
-        stroke: #2E7AC5;
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(-5rem, 0); /* Move 5rem to the left */
     }
     50% {
-        stroke: #2e7ac5d4;
+      transform: translate(-5rem, 5rem); /* Move 5rem down */
+    }
+    75% {
+      transform: translate(0, 5rem); /* Move 5rem to the right */
     }
     100% {
-        stroke: #1a3f6d8f;
+      transform: translate(0, 0);
     }
-}
+  }

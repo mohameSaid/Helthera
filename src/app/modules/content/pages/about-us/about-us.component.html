@@ -1,1 +1,105 @@
- 
+<div class="about-us-wrapper">
+  <!-- Landing Carosal  -->
+  <div class="landing-sec">
+    <custom-carousel *ngIf="carosalData" [data]="carosalData">
+    </custom-carousel>
+  </div>
+
+  <!-- Seperator Line -->
+  <div class="bold-line-seperator my-2">
+    <span></span>
+  </div>
+
+  <!-- Redefined Healing section -->
+  <section class="rf-heling d-flex flex-column align-center gap-4">
+    <h2 class="text-blue">
+      {{ "redefined_healing_2" | translate }}
+    </h2>
+    <p class="font-regular-large text-grey text-center mb-2">
+      {{ "rh_dec" | translate }}
+    </p>
+
+    <helthera-link-button
+      routerLink="/content/stay-tuned"
+      [label]="'our_services' | translate"
+      type="secondary"
+    >
+    </helthera-link-button>
+  </section>
+
+  <!-- Our Journey section -->
+  <section class="our-journey d-flex my-4">
+    <div class="content d-flex flex-column">
+      <p class="primary-main font-regular-large corben-font mb-2">
+        {{ "how_it_came" | translate }}
+      </p>
+      <h2 class="text-blue mb-4">
+        {{ "our_journey" | translate }}
+      </h2>
+      <p class="decsription font-regular-large text-grey">
+        {{ "our_journey_dec" | translate }}
+      </p>
+    </div>
+    <div class="shape animated" animate [replaceSvg]="svgs.ourJourney"></div>
+  </section>
+  <div class="flex-center-all">
+    <h1 class="gradient-text text-center">
+      {{ "our_journey_dec2" | translate }}
+    </h1>
+  </div>
+
+  <!-- From a Vision to Reality -->
+  <section class="vision-reality">
+    <div class="content">
+      <h2 class="text-blue mb-4">
+        {{ "from_vision_to_reality" | translate }}
+      </h2>
+      <p class="font-regular-large text-grey mb-2">
+        {{ "from_vision_to_reality_dec" | translate }}
+      </p>
+    </div>
+    <div
+      class="d-flex justify-center shape animated"
+      animate
+      [replaceSvg]="svgs.visionToReality"
+    ></div>
+  </section>
+
+  <!-- Info Cards -->
+  <section class="info-cards d-flex gap-4">
+    <div class="card col-6">
+      <p class="font-regular-large text-white mb-4">
+        {{ "origin_our_name" | translate }}
+      </p>
+
+      <div class="flex-center-all w-100">
+        <div class="health d-flex justify-center col-6">
+          <div [replaceSvg]="svgs.icons.health"></div>
+        </div>
+        <b class="font-bold-medium text-white"> + </b>
+        <div class="health d-flex justify-center col-6">
+          <div [replaceSvg]="svgs.icons.era"></div>
+        </div>
+      </div>
+      <div class="flex-center-all w-100">
+        <p class="text-white font-regular-medium text-center col-6">
+          {{ "health" | translate }}
+        </p>
+        <p class="text-white font-regular-medium text-center col-6">
+          {{ "era" | translate }}
+        </p>
+      </div>
+    </div>
+    <div
+      class="card col-6 d-flex flex-column justify-center align-center gap-4"
+    >
+      <div [replaceSvg]="svgs.logos.HeltheraWhite"></div>
+
+      <p class="font-regular-large text-white">
+        {{ "brand_desc" | translate }}
+      </p>
+    </div>
+  </section>
+
+  <section></section>
+</div>

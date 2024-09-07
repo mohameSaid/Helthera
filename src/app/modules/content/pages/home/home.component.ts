@@ -7,6 +7,7 @@ import {
   Testimonial_arraw_right,
 } from '../../constants/home-svg/arraws-testimonial';
 import { Router } from '@angular/router';
+import { scrollDown } from 'src/app/modules/shared/utiltes/functions';
 
 @Component({
   selector: 'app-home',
@@ -92,6 +93,10 @@ export class HomeComponent {
 
     this.selectedTestimonial =
       this.testemonialsUsers[this.selectedTestimonialIndex];
+  }
+
+  scroll() {
+    scrollDown(400);
   }
   // Called when the component is destroyed
   ngOnDestroy(): void {

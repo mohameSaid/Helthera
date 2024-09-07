@@ -1,18 +1,35 @@
-@import "../../../../../assets/styles/abstracts/index.scss";
-@import "../../../../../assets/styles/base/index.scss";
-
 .stay-tuned-wrapper {
-  background: linear-gradient(to bottom, #001428, #2e7ac5);
+  background: linear-gradient(45deg, #001428, #2e7ac5);
+  background-size: 200% 200%;
   border-radius: 2rem;
   margin-bottom: 2rem;
-  .landing-content {
-    min-height: 40rem;
-    @include flex-center-all;
-    flex-direction: column;
-    gap: 2rem;
+  animation: gradientAnimation 5s ease infinite;
+}
 
-    .description {
-      @include font(1rem, $white, 400, sf-pro-display);
-    }
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.landing-content {
+  min-height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: 'SF Pro Display', sans-serif;
 }

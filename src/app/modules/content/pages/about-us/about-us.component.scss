@@ -1,3 +1,137 @@
- .avbo{
-    padding: 10rem;
- }
+@import "../../../../../assets/styles/abstracts/index.scss";
+@import "../../../../../assets/styles/base/index.scss";
+
+.about-us-wrapper {
+  .landing-sec {
+    position: relative;
+    background-color: $primary-dark;
+    height: 36rem;
+    border-radius: 2.5rem;
+    ::ng-deep {
+      svg {
+        max-width: 80%;
+        #Meditation-pana {
+          animation: moveMeditation 2s ease-in-out infinite alternate;
+        }
+
+        #hlthera {
+          animation: moveHlthera 4s ease-in-out infinite alternate;
+        }
+      }
+    }
+  }
+  .bold-line-seperator {
+    margin-block: 8rem 3rem;
+  }
+  .rf-heling {
+    p {
+      max-width: 48%;
+    }
+  }
+
+  .our-journey {
+    padding-inline: $contnt-padding-insid-container;
+    margin-block: 5rem 2rem;
+    .content {
+      flex-basis: 58%;
+      .decsription {
+        max-width: 68%;
+      }
+    }
+    ::ng-deep {
+      #Boy,
+      #Girl {
+        transition: transform 2s ease-in-out;
+      }
+      #Girl {
+        transition-delay: 1.5s;
+      }
+      #Logo {
+        animation: scaleDown 1s ease-in-out 5s;
+        transition-delay: 3s;
+      }
+    }
+  }
+  h1.gradient-text {
+    max-width: 55%;
+    margin-block: 4rem;
+  }
+
+  .vision-reality {
+    padding-inline: $contnt-padding-insid-container;
+    background-color: $support-pale-grey;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+
+    ::ng-deep {
+      svg {
+        // max-width: 80%;
+      }
+    }
+    .content,
+    .shape {
+      flex-basis: 50%;
+    }
+    .shape {
+      padding-top: 3rem;
+    }
+  }
+  .info-cards {
+    margin-block: 3rem;
+    .card {
+      border-radius: 1.5rem;
+      padding: 3rem;
+    }
+    .card:nth-of-type(1) {
+      background-color: $text-blue;
+    }
+    .card:nth-of-type(2) {
+      background-color: $primary-main;
+    }
+  }
+
+
+  
+}
+
+::ng-deep {
+  .our-journey {
+    .shape:not(.visible) {
+      #Boy {
+        transform: translate(475.013px, 21.559px);
+      }
+      #Girl {
+        transform: translate(475.013px, 21.559px);
+      }
+    }
+  }
+}
+
+// svg Aniomation
+@keyframes moveMeditation {
+  0% {
+    transform: translate(-28.054px, 123.624px); /* Starting position */
+  }
+  100% {
+    transform: translate(-57.054px, 125.624px); /* End position */
+  }
+}
+
+/* Keyframes for hlthera */
+@keyframes moveHlthera {
+  0% {
+    transform: translate(-57px, 123.624px); /* Starting position */
+  }
+  100% {
+    transform: translate(-21.054px, 175.624px); /* End position */
+  }
+}
+@keyframes scaleDown {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}

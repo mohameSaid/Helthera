@@ -1,0 +1,21 @@
+<!-- {{ data | json}} -->
+<div class="carousel-wrapper h-100">
+  <owl-carousel-o class="h-100" [options]="customOptions">
+    <ng-template *ngFor="let slide of data" carouselSlide>
+      <div class="slide d-flex">
+        <h2
+          class="caption text-white"
+          typingEffect
+          [textToType]="slide.caption"
+          [typingSpeed]="100"
+          [startDelay]="0"
+        ></h2>
+        <div
+          *ngIf="slide.svg"
+          class="svg-container"
+          [replaceSvg]="slide.svg"
+        ></div>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+</div>

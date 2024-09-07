@@ -1,0 +1,28 @@
+@import "../abstracts/index.scss";
+
+.carousel-wrapper {
+  .owl-carousel {
+    height: 100%;
+    .owl-stage-outer {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.owl-dots .owl-dot span {
+  background-color: $background-ice-blue !important;
+  border-radius: 50%;
+  width: 2.2rem !important;
+  height: 8px !important;
+  display: inline-block;
+  margin: 5px !important;
+}
+
+.owl-dots {
+  margin-top: 1.5rem !important;
+  .owl-dot.active span {
+    background-color: $background-ice-blue; /* Darker red for the active dot */
+  }
+}

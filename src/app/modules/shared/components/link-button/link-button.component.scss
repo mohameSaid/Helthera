@@ -5,8 +5,8 @@
   border: none;
   color: $white;
   background-color: $primary-main;
-  width: 10.5rem;
-  height: 3.4rem;
+  min-width: 10.5rem;
+  height: 3rem;
   border-radius: 1.875rem;
   font-size: 1rem;
   display: flex;
@@ -36,9 +36,6 @@
 
   &--secondary {
     background-color: $secondary-main;
-  }
-  .lable {
-    font-family: "sf-pro-display";
   }
 
   .arraw-icon {

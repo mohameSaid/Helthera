@@ -42,7 +42,7 @@
 :root {
   --icon: 3rem; //48px
   --h-1: 2rem; // 32px
-  --h-2: 1.5rem; // 24px
+  --h-2: 1.6rem; // 25.6px
   --h-3: 1.25rem; // 20px
   --h-4: 1rem; // 16px
   --h-5: 0.875rem; // 14px
@@ -50,7 +50,7 @@
   /* Font sizes for screens bigger than mobile */
   --fs-regular-Xlarge: #{$fs-xl}; // 24px;
   --fs-regular-large: #{$fs-lg}; // 20px;
-  --fs-regular-medium: #{$fs-sm}; // 14px;
+  --fs-regular-medium: #{$fs-base}; // 16px;
   --fs-regular-small: #{$fs-xs}; // 12px;
 
   --fs-bold-Xlarge: #{$fs-xl}; // 24px;
@@ -99,16 +99,16 @@ h4 {
 
 // Regular
 .font-regular-xl {
-  @include font($fs-regular-Xlarge, $fw-regular);
+  @include font($fs-regular-Xlarge, $fw-regular, sf-pro-display);
 }
 .font-regular-large {
-  @include font($fs-regular-large, $fw-regular);
+  @include font($fs-regular-large, $fw-regular, sf-pro-display);
 }
 .font-regular-medium {
-  @include font($fs-regular-medium, $fw-regular);
+  @include font($fs-regular-medium, $fw-regular, sf-pro-display);
 }
 .font-regular-small {
-  @include font($fs-regular-small, $fw-regular);
+  @include font($fs-regular-small, $fw-regular, sf-pro-display);
 }
 
 // Bold

@@ -1,4 +1,4 @@
-import { Healers, HealthCentres } from './icons';
+import { Era, Healers, Health, HealthCentres } from './icons';
 import { landingShape } from './landing-shape';
 import { Logos } from './logos';
 import { ourJourney } from './our-Journey';
@@ -15,6 +15,8 @@ export const AboutUsSvgs = {
   icons: {
     healers: Healers,
     healthCentres: HealthCentres,
+    health: Health,
+    era: Era,
   },
   logos: Logos,
 };

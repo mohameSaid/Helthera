@@ -1,5 +1,3 @@
-@import "../abstracts/color-palette.scss";
-
 .col-1 {
   width: 8.3333333333%;
 }
@@ -60,42 +58,9 @@
 .align-center {
   align-items: center;
 }
-// spacing
-.mx-2 {
-  margin-inline: 0.5rem;
+.justify-center {
+  justify-content: center;
 }
-.mx-4 {
-  margin-inline: 1srem;
-}
-
-.w-100 {
-  width: 100%;
-}
-.text-center {
-  text-align: center;
-}
-
-// colors
-.primary-main {
-  color: $primary-main;
-}
-.primary-dark {
-  color: $primary-dark;
-}
-.text-grey {
-  color: $text-grey;
-}
-.text-light-grey {
-  color: $text-grey-2;
-}
-.text-white {
-  color: $white;
-}
-.text-blue {
-  color: $text-blue;
-}
-
-// font weight
-.fw-bold {
-  font-weight: bold;
+.flex-column {
+  flex-direction: column;
 }
